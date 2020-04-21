@@ -132,7 +132,8 @@ header {
 
 /* 商品 */
 /* 显示的广告 */
-.pr {
+.pr,
+.pr2 {
   padding-top: 92px;
   position: relative;
 }
@@ -140,7 +141,8 @@ header {
   width: 100%;
 }
 /* 下面的小标志 */
-.pr > img {
+.pr > img,
+.pr2 > img {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -154,7 +156,8 @@ header {
   margin: auto;
   height: 95px;
 }
-.zoom-wrapper {
+.zoom-wrapper,
+.zoom-wrappers {
   padding-top: 60px;
 
   box-sizing: border-box;

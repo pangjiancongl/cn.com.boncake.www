@@ -242,45 +242,8 @@
         </a>
       </div>
     </div>
-    <!-- 轮播图js -->
     <script>
-      let num = 0;
-      $(".right-go").click(function () {
-        num++;
-        if (num > 2) {
-          num = 0;
-        }
-        $(".zoom-wrapper-top ul").animate({
-          left: -95 * num,
-        });
-      });
-      $(".left-go").click(function () {
-        num--;
-        if (num < 0) {
-          num = 2;
-        }
-        $(".zoom-wrapper-top ul").animate({
-          left: -95 * num,
-        });
-      });
-      let timer = setInterval(function () {
-        $(".right-go").click();
-      }, 3000);
-      $(".top-pro-swiper").mousemove(function () {
-        clearInterval(timer);
-      });
-      $(".top-pro-swiper").mouseout(function () {
-        clearInterval(timer);
-        timer = setInterval(function () {
-          $(".right-go").click();
-        }, 3000);
-      });
-    </script>
-
-    <!-- 放大镜插件 -->
-    <script src="./lib/jquery.exzoom.js"></script>
-    <script>
-      $("#exzoom").exzoom(
+      $(".exzoom").exzoom(
         (defaults = {
           navWidth: 60, //列表每个宽度,该版本中请把宽高填写成一样
           navHeight: 60, //列表每个高度,该版本中请把宽高填写成一样
@@ -293,18 +256,18 @@
         $(".zoom-wrapper").slideToggle(1000);
       });
     </script>
-    <div class="pr2">
+    <div class="pr">
       <div class="swiper-slide">
         <img src="./images/bj-02.jpg" alt="" />
       </div>
       <img src="./images/home-down-icon.png" alt="" />
     </div>
-
-    <div class="zoom-wrappers">
+    <!-- 隐藏的商品 -->
+    <div class="zoom-wrapper clearfix">
       <!-- 轮播图 -->
-      <div class="top-pro-swipers clearfix top-pro-swiper">
-        <img src="./images/left-go.png" alt="" class="left-go02 left-go" />
-        <div class="zoom-wrapper-tops zoom-wrapper-top">
+      <div class="top-pro-swiper clearfix">
+        <img src="./images/left-go.png" alt="" class="left-go" />
+        <div class="zoom-wrapper-top">
           <ul>
             <li>
               <img src="./images/shop07.jpg" alt="" />
@@ -326,45 +289,135 @@
             </li>
           </ul>
         </div>
-        <img src="./images/right-go.png" alt="" class="right-go02 right-go" />
+        <img src="./images/right-go.png" alt="" class="right-go" />
+      </div>
+
+      <!-- 缩放图 -->
+      <div class="spec-preview">
+        <div class="exzoom">
+          <!--大图区域-->
+          <div class="exzoom_img_box">
+            <ul class="exzoom_img_ul">
+              <!-- <li><img src=".//images/suofang01.jpg" /></li>
+              <li><img src="./images/suofang02.jpg" alt="" /></li>
+              <li><img src="./images/suofang03.jpg" alt="" /></li> -->
+            </ul>
+          </div>
+          <!--缩略图导航-->
+          <div class="exzoom_nav"></div>
+        </div>
+      </div>
+      <div class="size">
+        <p class="en-name">Alice ' s Song</p>
+        <p class="cn-name">爱丽丝的歌</p>
+        <div class="price-wrap-money">
+          <span class="small">¥</span>
+          <span class="big">198</span>
+        </div>
+        <p class="cake-type">Cake type | 蛋糕种类</p>
+        <p class="cake-small-name">豆沙裱花</p>
+        <div class="cake-num">
+          <span class="label">数量：</span>
+          <input type="text" value="1" />
+          <img src="./images/double-icon.png" alt="" />
+        </div>
+
+        <div class="cake-size">
+          <span class="label">尺寸：</span>
+          <input type="text" value="9只" />
+          <img src="./images/double-icon.png" alt="" />
+          <div class="cake-size2">9只</div>
+        </div>
+        <div class="eat-people">9只</div>
+        <div class="cake-book">
+          需提前5小时预订
+        </div>
+        <div class="buy-btn">
+          <button class="join-cart">
+            <img src="./images/btn-cart-icon.png" alt="" />
+            <div class="join-cart-text">加入购物车</div>
+          </button>
+          <button class="buy-now">立即购买</button>
+        </div>
+        <div class="sweet-level">
+          Sweetness level | 甜度
+        </div>
+        <div class="stars">
+          <img src="./images/star-icon.png" alt="" />
+          <img src="./images/star-icon.png" alt="" />
+          <img src="./images/star-icon.png" alt="" />
+          <img src="./images/star-light-icon.png" alt="" />
+          <img src="./images/star-light-icon.png" alt="" />
+        </div>
+        <div class="store">
+          Preservation conditions｜保鲜条件
+        </div>
+        <div class="store-desc">
+          最佳保存温度0°C，最佳赏味期为24小时内 <br />
+          食用前请在室温下放置20分钟，口感更佳
+        </div>
+        <a href="">
+          <button class="more-btn">
+            了解更多>>
+          </button>
+        </a>
       </div>
     </div>
+    <!-- 轮播图js -->
     <script>
-      $(".zoom-wrappers").css("display", "none");
-      $(".pr2").click(function () {
-        $(".zoom-wrappers").slideToggle(1000);
-      });
-    </script>
-    <!-- 轮播图 -->
-    <script>
-      let nun = 0;
-      // clearInterval(timer);
-      $(".right-go02").click(function () {
-        nun++;
-        if (nun > 2) {
-          nun = 0;
+      let num = 0;
+      $(".right-go").click(function () {
+        num++;
+        if (num > 2) {
+          num = 0;
         }
-        $(".zoom-wrapper-tops ul").animate({
-          left: -95 * nun,
-        });
+        $(this)
+          .prev()
+          .children("ul")
+          .animate({
+            left: -95 * num,
+          });
       });
-      $(".left-go02").click(function () {
-        nun--;
-        if (nun < 0) {
-          nun = 2;
+      $(".left-go").click(function () {
+        num--;
+        if (num < 0) {
+          num = 2;
         }
-        $(".zoom-wrapper-tops ul").animate({
-          left: -95 * nun,
-        });
+        $(this)
+          .next()
+          .children("ul")
+          .animate({
+            left: -95 * num,
+          });
       });
-      $(".top-pro-swipers").mousemove(function () {
+      let timer = setInterval(function () {
+        $(".right-go").click();
+      }, 3000);
+      $(".top-pro-swiper").mousemove(function () {
         clearInterval(timer);
       });
-      $(".top-pro-swipers").mouseout(function () {
+      $(".top-pro-swiper").mouseout(function () {
         clearInterval(timer);
         timer = setInterval(function () {
-          $(".right-go02").click();
+          $(".right-go").click();
         }, 3000);
+      });
+    </script>
+
+    <!-- 放大镜插件 -->
+    <script src="./lib/jquery.exzoom.js"></script>
+    <script>
+      $(".exzoom").exzoom(
+        (defaults = {
+          navWidth: 60, //列表每个宽度,该版本中请把宽高填写成一样
+          navHeight: 60, //列表每个高度,该版本中请把宽高填写成一样
+          autoPlay: false, //是否自动播放
+          navBorder: 0, //列表边框，没有边框填写0，边框在css中修改
+        })
+      );
+      $(".zoom-wrapper").css("display", "none");
+      $(".pr").click(function () {
+        $(".zoom-wrapper").slideToggle(1000);
       });
     </script>
   </body>
