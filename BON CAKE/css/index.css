@@ -1,0 +1,367 @@
+/* 顶部导航 */
+.top {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 1px 12px 0px rgba(128, 113, 113, 0.3);
+}
+header {
+  width: 1260px;
+  height: 92px;
+  margin: 0 auto;
+}
+.nav-logo {
+  float: left;
+}
+.nav-logo img {
+  margin: 20px 0 0 30px;
+}
+.nav-menu {
+  float: left;
+  width: 586px;
+  text-align: center;
+  margin-top: 6px;
+}
+.nav-menu a {
+  display: inline-block;
+  margin: 20px 30px 0 5px;
+}
+.nav-menu a span {
+  color: #999;
+}
+.nav-menu a span:first-child {
+  color: #333;
+}
+.nav-menu a:first-child span {
+  color: #d3b145;
+}
+.nav-menu span:first-child {
+  font-size: 15px;
+  display: block;
+}
+.nav-menu span:nth-child(2) {
+  display: block;
+  margin-top: 6px;
+  font-size: 8px;
+  line-height: 1.6;
+  position: relative;
+}
+.active::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 2px;
+  background-color: #d3b145;
+}
+.header-cut-line {
+  float: left;
+  margin-top: 24px;
+  margin-right: 10px;
+}
+.header-controller {
+  float: right;
+  width: 400px;
+  height: 66px;
+  text-align: center;
+  margin-top: 6px;
+}
+.header-controller > div {
+  display: inline-block;
+  height: 100%;
+  margin-right: 25px;
+  line-height: 66px;
+  font-size: 15px;
+}
+.header-controller-cart-icon {
+  display: inline-block;
+  position: relative;
+}
+.header-controller-cart-text span {
+  color: #e60012;
+  font-size: 12px;
+}
+.header-controller-cart-icon div {
+  position: absolute;
+  border: 5px solid transparent;
+  border-bottom-color: #e60012;
+  top: 16px;
+  left: 10px;
+}
+.header_position {
+  position: relative;
+}
+.header_position > img:first-child {
+  width: 19px;
+}
+.header_position-area-list {
+  position: absolute;
+  top: 50px;
+  left: -16px;
+  font-size: 15px;
+
+  width: 100px;
+  line-height: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: left;
+  display: none;
+  padding: 2px;
+  box-shadow: 0px 1px 12px 0px rgba(128, 113, 113, 0.3);
+}
+.header_position-area-list a {
+  color: #333333;
+}
+.header_position-area-list li {
+  display: inline-block;
+}
+.header_position-area-list img {
+  vertical-align: middle;
+  width: 19px;
+}
+.header_position-area-list li a:hover {
+  color: #d3b145;
+}
+/* 鼠标经过北京让隐藏的div显示,离开隐藏 */
+.header_position:hover > .header_position-area-list {
+  display: block;
+}
+
+/* 商品 */
+/* 显示的广告 */
+.pr {
+  padding-top: 92px;
+  position: relative;
+}
+.swiper-slide img {
+  width: 100%;
+}
+/* 下面的小标志 */
+.pr > img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 1;
+}
+/* 隐藏的商品 */
+.top-pro-swiper {
+  position: relative;
+  width: calc(95px * 4);
+  margin: auto;
+  height: 95px;
+}
+.zoom-wrapper {
+  padding-top: 60px;
+
+  box-sizing: border-box;
+  width: 1015px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+.zoom-wrapper-top {
+  width: calc(95px * 4);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.zoom-wrapper-top ul {
+  position: absolute;
+  width: 150%;
+}
+.zoom-wrapper-top li {
+  float: left;
+}
+.zoom-wrapper-top li img {
+  width: 95px;
+}
+.left-go {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: -60px;
+}
+
+.right-go {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: -60px;
+}
+/* 缩放图 */
+.spec-preview {
+  width: 500px;
+  height: 500px;
+}
+.exzoom_zoom_outer {
+  width: 600px;
+  height: 600px;
+}
+.exzoom .exzoom_img_ul_outer {
+  border: none;
+}
+.exzoom .exzoom_preview {
+  width: 400px !important;
+  height: 400px !important;
+}
+.spec-preview {
+  float: left;
+}
+
+.size {
+  float: right;
+  width: 400px;
+
+  text-align: right;
+}
+.en-name {
+  font-size: 30px;
+  color: #333333;
+}
+.cn-name {
+  padding-top: 19px;
+  font-size: 24px;
+  color: #666666;
+}
+.price-wrap-money {
+  margin: 16px 12px 0 10px;
+}
+.price-wrap-money .small {
+  font-size: 26px;
+  font-family: MicrosoftYaHei;
+  color: #333;
+}
+.price-wrap-money .big {
+  font-size: 39px;
+  font-family: MicrosoftYaHei;
+  color: #333;
+}
+.cake-type {
+  padding-top: 40px;
+  font-size: 16px;
+  color: #999999;
+}
+.cake-small-name {
+  padding-top: 10px;
+  padding-bottom: 47px;
+  font-size: 16px;
+  color: #333333;
+}
+.cake-num,
+.cake-size {
+  position: relative;
+  margin-bottom: 20px;
+}
+.cake-num .label,
+.cake-size .label {
+  margin-right: 5px;
+  font-size: 14px;
+  color: #333333;
+}
+.cake-num input,
+.cake-size input {
+  width: 120px;
+  height: 26px;
+  text-align: center;
+  padding-right: 21px;
+  border-radius: 4px;
+  border: solid 1px #999999;
+  font-size: 16px;
+}
+.cake-num img,
+.cake-size img {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.cake-size2 {
+  font-size: 15px;
+  color: #d3b145;
+  width: 47px;
+  height: 47px;
+  line-height: 47px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 12px 0px rgba(128, 113, 113, 0.3);
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 6px;
+  right: 0;
+  display: none;
+}
+.cake-size:hover > .cake-size2 {
+  display: block;
+}
+.eat-people {
+  padding-top: 7px;
+  font-size: 16px;
+  color: #666666;
+  margin-right: 20px;
+}
+.cake-book {
+  padding-top: 5px;
+  font-size: 16px;
+  color: #666666;
+}
+.buy-btn {
+  margin-top: 40px;
+}
+.join-cart {
+  width: 147px;
+  height: 33px;
+  background-color: #333333;
+  line-height: 33px;
+  border: none;
+}
+.join-cart-text {
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  vertical-align: middle;
+}
+.buy-now {
+  border: none;
+  width: 126px;
+  height: 33px;
+  margin-left: 21px;
+  vertical-align: top;
+  border: solid 1px #333333;
+  font-size: 16px;
+  color: #333333;
+  background-color: #ffffff;
+}
+.sweet-level {
+  padding-top: 52px;
+  font-size: 16px;
+  color: #999999;
+  font-size: 16px;
+}
+.stars {
+  padding-top: 7px;
+}
+.store {
+  padding-top: 11px;
+  font-size: 16px;
+  color: #999999;
+}
+.store-desc {
+  padding-top: 8px;
+  font-size: 16px;
+  color: #333333;
+}
+.more-btn {
+  margin-top: 44px;
+  width: 120px;
+  height: 30px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 20px 0px 0px;
+  border: none;
+}
+.pr2 {
+  padding: 0;
+}

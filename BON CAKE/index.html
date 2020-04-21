@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BON CAKE官网-高颜值的甜</title>
+    <link rel="shortcut icon" href="./images/logol.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./lib/normalize.css" />
+    <!-- 放大镜css -->
+    <link rel="stylesheet" href="./css/jquery.exzoom.css" />
+    <link rel="stylesheet" href=".//css/index.css" />
+  </head>
+  <body>
+    <!-- 顶部导航栏 -->
+    <div class="top">
+      <header class="clearfix">
+        <!-- logo -->
+        <a href="./index.html" class="nav-logo">
+          <img src="./images/nav-logo.png" alt="" />
+        </a>
+        <!-- 顶部中间 -->
+        <nav class="nav-menu">
+          <a href="./index.html">
+            <span>首页</span>
+            <span class="active"> HOME </span>
+          </a>
+          <a href="">
+            <span>所有商品</span>
+            <span> PRODUCTS </span>
+          </a>
+          <a href="">
+            <span>下午茶点</span>
+            <span> TEA TIME</span>
+          </a>
+          <a href="">
+            <span>生如夏花</span>
+            <span> SUMMER FLOWERS</span>
+          </a>
+          <a href="">
+            <span>双层定制</span>
+            <span> CUSTOMIZED PRO </span>
+          </a>
+        </nav>
+        <!-- 顶部竖线 -->
+        <img src="./images/cut-line.png" alt="" class="header-cut-line" />
+        <!-- 顶部右端 -->
+        <div class="header-controller">
+          <!-- 登录 -->
+          <div class="header-controller-login">
+            <a href="">
+              <img src="./images/login-icon.png" alt="" />
+              <span> 登录</span>
+            </a>
+          </div>
+          <!-- 注册 -->
+          <div class="header-controller-register">
+            <a href="">
+              <img src="./images/register-icon.png" alt="" />
+              <span>注册</span>
+            </a>
+          </div>
+          <!-- 地址 -->
+          <div class="header_position">
+            <img src="./images/beijng.png" alt="" />
+            <span>北京市</span>
+            <img src="./images/pull-down.png" alt="" />
+            <!-- 隐藏的地址 -->
+            <ul class="header_position-area-list">
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/beijng.png" alt="" />
+                  北京市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/shanghai.png" alt="" />
+                  上海市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/tianjin.png" alt="" />
+                  天津市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/shenyang.png" alt="" />
+                  沈阳市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/chengdu.jpg" alt="" />
+                  成都市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/hangzhou.png" alt="" />
+                  杭州市
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- 购物车 -->
+          <div class="header-controller-cart">
+            <a href="">
+              <div class="header-controller-cart-icon">
+                <img src="./images/cart-icon.png" alt="" />
+                <div></div>
+              </div>
+              <span class="header-controller-cart-text">
+                购物车
+                <span> (0) </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- 引入jquery -->
+    <script src="./lib/jquery/jquery-3.4.1.min.js"></script>
+    <script>
+      // 点击header_position-area-list里面的地址上面的地址会改成这个地址图片也会改动
+      $(".header_position-area-list li a").on("click", function () {
+        // 改变文本
+        $(".header_position span").html($(this).text());
+        // 获取点击图片的路径
+        let ImgSrc = $(this).children("img").attr("src");
+        // 改变图片路径
+        $(".header_position img:first-child").attr("src", ImgSrc);
+      });
+    </script>
+    <!-- 商品 -->
+    <!-- 显示出来的广告 -->
+    <div class="pr">
+      <div class="swiper-slide">
+        <img src="./images/bj-01.jpg" alt="" />
+      </div>
+      <img src="./images/home-down-icon.png" alt="" />
+    </div>
+    <!-- 隐藏的商品 -->
+    <div class="zoom-wrapper clearfix">
+      <!-- 轮播图 -->
+      <div class="top-pro-swiper clearfix">
+        <img src="./images/left-go.png" alt="" class="left-go" />
+        <div class="zoom-wrapper-top">
+          <ul>
+            <li>
+              <img src="./images/shop01.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/shop01.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/shop01.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/shop01.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/shop01.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/shop01.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+        <img src="./images/right-go.png" alt="" class="right-go" />
+      </div>
+
+      <!-- 缩放图 -->
+      <div class="spec-preview">
+        <div class="exzoom" id="exzoom">
+          <!--大图区域-->
+          <div class="exzoom_img_box">
+            <ul class="exzoom_img_ul">
+              <li><img src=".//images/suofang01.jpg" /></li>
+              <li><img src="./images/suofang02.jpg" alt="" /></li>
+              <li><img src="./images/suofang03.jpg" alt="" /></li>
+            </ul>
+          </div>
+          <!--缩略图导航-->
+          <div class="exzoom_nav"></div>
+        </div>
+      </div>
+      <div class="size">
+        <p class="en-name">Alice ' s Song</p>
+        <p class="cn-name">爱丽丝的歌</p>
+        <div class="price-wrap-money">
+          <span class="small">¥</span>
+          <span class="big">198</span>
+        </div>
+        <p class="cake-type">Cake type | 蛋糕种类</p>
+        <p class="cake-small-name">豆沙裱花</p>
+        <div class="cake-num">
+          <span class="label">数量：</span>
+          <input type="text" value="1" />
+          <img src="./images/double-icon.png" alt="" />
+        </div>
+
+        <div class="cake-size">
+          <span class="label">尺寸：</span>
+          <input type="text" value="9只" />
+          <img src="./images/double-icon.png" alt="" />
+          <div class="cake-size2">9只</div>
+        </div>
+        <div class="eat-people">9只</div>
+        <div class="cake-book">
+          需提前5小时预订
+        </div>
+        <div class="buy-btn">
+          <button class="join-cart">
+            <img src="./images/btn-cart-icon.png" alt="" />
+            <div class="join-cart-text">加入购物车</div>
+          </button>
+          <button class="buy-now">立即购买</button>
+        </div>
+        <div class="sweet-level">
+          Sweetness level | 甜度
+        </div>
+        <div class="stars">
+          <img src="./images/star-icon.png" alt="" />
+          <img src="./images/star-icon.png" alt="" />
+          <img src="./images/star-icon.png" alt="" />
+          <img src="./images/star-light-icon.png" alt="" />
+          <img src="./images/star-light-icon.png" alt="" />
+        </div>
+        <div class="store">
+          Preservation conditions｜保鲜条件
+        </div>
+        <div class="store-desc">
+          最佳保存温度0°C，最佳赏味期为24小时内 <br />
+          食用前请在室温下放置20分钟，口感更佳
+        </div>
+        <a href="">
+          <button class="more-btn">
+            了解更多>>
+          </button>
+        </a>
+      </div>
+    </div>
+    <!-- 轮播图js -->
+    <script>
+      let num = 0;
+      $(".right-go").click(function () {
+        num++;
+        if (num > 2) {
+          num = 0;
+        }
+        $(".zoom-wrapper-top ul").animate({
+          left: -95 * num,
+        });
+      });
+      $(".left-go").click(function () {
+        num--;
+        if (num < 0) {
+          num = 2;
+        }
+        $(".zoom-wrapper-top ul").animate({
+          left: -95 * num,
+        });
+      });
+      let timer = setInterval(function () {
+        $(".right-go").click();
+      }, 3000);
+      $(".top-pro-swiper").mousemove(function () {
+        clearInterval(timer);
+      });
+      $(".top-pro-swiper").mouseout(function () {
+        clearInterval(timer);
+        timer = setInterval(function () {
+          $(".right-go").click();
+        }, 3000);
+      });
+    </script>
+
+    <!-- 放大镜插件 -->
+    <script src="./lib/jquery.exzoom.js"></script>
+    <script>
+      $("#exzoom").exzoom(
+        (defaults = {
+          navWidth: 60, //列表每个宽度,该版本中请把宽高填写成一样
+          navHeight: 60, //列表每个高度,该版本中请把宽高填写成一样
+          autoPlay: false, //是否自动播放
+          navBorder: 0, //列表边框，没有边框填写0，边框在css中修改
+        })
+      );
+      $(".zoom-wrapper").css("display", "none");
+      $(".pr").click(function () {
+        $(".zoom-wrapper").slideToggle(1000);
+      });
+    </script>
+    <div class="pr pr2">
+      <div class="swiper-slide">
+        <img src="./images/bj-02.jpg" alt="" />
+      </div>
+      <img src="./images/home-down-icon.png" alt="" />
+    </div>
+
+    <div class="zoom-wrappers">
+      <!-- 轮播图 -->
+      <div class="top-pro-swipers clearfix top-pro-swiper">
+        <img src="./images/left-go.png" alt="" class="left-go02 left-go" />
+        <div class="zoom-wrapper-tops zoom-wrapper-top">
+          <ul>
+            <li>
+              <img src="./images/shop07.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/shop08.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/shop09.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/shop10.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/shop11.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/shop12.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+        <img src="./images/right-go.png" alt="" class="right-go02 right-go" />
+      </div>
+
+     .
+
+     
+
+
+    <!-- 轮播图 -->
+    <script>
+      let nun = 0;
+      // clearInterval(timer);
+      $(".right-go02").click(function () {
+        nun++;
+        if (nun > 2) {
+          nun = 0;
+        }
+        $(".zoom-wrapper-tops ul").animate({
+          left: -95 * nun,
+        });
+      });
+      $(".left-go02").click(function () {
+        nun--;
+        if (nun < 0) {
+          nun = 2;
+        }
+        $(".zoom-wrapper-tops ul").animate({
+          left: -95 * nun,
+        });
+      });
+
+      $(".top-pro-swipers").mousemove(function () {
+        clearInterval(timer);
+      });
+      $(".top-pro-swipers").mouseout(function () {
+        clearInterval(timer);
+        timer = setInterval(function () {
+          $(".right-go02").click();
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
