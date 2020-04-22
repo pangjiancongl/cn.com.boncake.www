@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BON CAKE官网-高颜值的甜</title>
+    <link rel="shortcut icon" href="./images/logol.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./lib/normalize.css" />
+    <!-- 轮播图 -->
+    <link rel="stylesheet" href="./lib/slideshow/picture-carousel.min.css" />
+    <link rel="stylesheet" href="./css/galleryone.css" />
+  </head>
+  <body>
+    <!-- 顶部导航栏 -->
+    <div class="top">
+      <header class="clearfix">
+        <!-- logo -->
+        <a href="./index.html" class="nav-logo">
+          <img src="./images/nav-logo.png" alt="" />
+        </a>
+        <!-- 顶部中间 -->
+        <nav class="nav-menu">
+          <a href="./index.html">
+            <span>首页</span>
+            <span> HOME </span>
+          </a>
+          <a href="">
+            <span>所有商品</span>
+            <span> PRODUCTS </span>
+          </a>
+          <a href="">
+            <span>下午茶点</span>
+            <span class="active"> TEA TIME</span>
+          </a>
+          <a href="">
+            <span>生如夏花</span>
+            <span> SUMMER FLOWERS</span>
+          </a>
+          <a href="">
+            <span>双层定制</span>
+            <span> CUSTOMIZED PRO </span>
+          </a>
+        </nav>
+        <!-- 顶部竖线 -->
+        <img src="./images/cut-line.png" alt="" class="header-cut-line" />
+        <!-- 顶部右端 -->
+        <div class="header-controller">
+          <!-- 登录 -->
+          <div class="header-controller-login">
+            <a href="">
+              <img src="./images/login-icon.png" alt="" />
+              <span> 登录</span>
+            </a>
+          </div>
+          <!-- 注册 -->
+          <div class="header-controller-register">
+            <a href="">
+              <img src="./images/register-icon.png" alt="" />
+              <span>注册</span>
+            </a>
+          </div>
+          <!-- 地址 -->
+          <div class="header_position">
+            <img src="./images/beijng.png" alt="" />
+            <span>北京市</span>
+            <img src="./images/pull-down.png" alt="" />
+            <!-- 隐藏的地址 -->
+            <ul class="header_position-area-list">
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/beijng.png" alt="" />
+                  北京市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/shanghai.png" alt="" />
+                  上海市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/tianjin.png" alt="" />
+                  天津市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/shenyang.png" alt="" />
+                  沈阳市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/chengdu.jpg" alt="" />
+                  成都市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/hangzhou.png" alt="" />
+                  杭州市
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- 购物车 -->
+          <div class="header-controller-cart">
+            <a href="">
+              <div class="header-controller-cart-icon">
+                <img src="./images/cart-icon.png" alt="" />
+                <div></div>
+              </div>
+              <span class="header-controller-cart-text">
+                购物车 <span> ( <b>0</b> ) </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- 引入jquery -->
+    <script src="./lib/jquery/jquery-3.4.1.min.js"></script>
+    <script>
+      // 点击header_position-area-list里面的地址上面的地址会改成这个地址图片也会改动
+      $(".header_position-area-list li a").on("click", function () {
+        // 改变文本
+        $(".header_position span").html($(this).text());
+        // 获取点击图片的路径
+        let ImgSrc = $(this).children("img").attr("src");
+        // 改变图片路径
+        $(".header_position img:first-child").attr("src", ImgSrc);
+      });
+    </script>
+
+    <!-- 轮播图 slideshow-->
+    <div class="slideshow" id="box"></div>
+    <!-- 轮播图插件 -->
+    <script src="./lib/slideshow/picture-carousel.min.js"></script>
+    <script>
+      var box = new PictureCarousel("#box", {
+        direction: "left", //轮播方向：left，right
+        interval: 4000, //单位ms,轮播持续时间
+        duration: 50, //单位ms,自动切换时间间隔，最佳速度:容器宽度/duration = 25
+        autoplay: true, //是否自动播放
+        display: 1, //同时显示的滑块数量
+        arrow: true, //是否显示左右箭头
+        dots: false, //是否显示指示点
+        listData: [
+          //插入图片等的数据
+          { src: "./images/lunbotu01.jpg", alt: "1" },
+          { src: "./images/lunbotu01.jpg", alt: "2" },
+        ],
+      });
+      box.init();
+    </script>
+
+    <!-- 广告 -->
+    <div class="page-wrapper">
+      <a href="javascript:;">
+        <img src="./images/page-wrapper.jpg" alt="" />
+      </a>
+      <div class="summer-desc">
+        <div class="summer-more">
+          <h2>下午茶</h2>
+          <p>TEA TIME</p>
+          <a href="javascript:;" class="btn">更多</a>
+          <img src="./images/more-down.png" alt="" />
+        </div>
+        <div class="activity"></div>
+      </div>
+    </div>
+  </body>
+</html>

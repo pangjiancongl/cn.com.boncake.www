@@ -43,7 +43,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  margin: 0;
+  margin-left: 100px;
 }
 .exzoom .exzoom_nav .exzoom_nav_inner span {
   /* border: 1px solid #ddd; */

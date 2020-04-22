@@ -64,7 +64,7 @@ header {
 }
 .header-controller {
   float: right;
-  width: 400px;
+  width: 405px;
   height: 66px;
   text-align: center;
   margin-top: 6px;
@@ -367,4 +367,229 @@ header {
 }
 .pr2 {
   padding: 0;
+}
+#twos {
+  height: 120px;
+  line-height: 40px;
+}
+
+/* 主厨推荐 */
+.main-pic {
+  padding-top: 104px;
+}
+.main-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333333;
+}
+.main-photo {
+  margin-top: 30px;
+}
+.main-photo img {
+  width: 706px;
+  height: 674px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+footer {
+  margin-top: 100px;
+  /* width: 100%; */
+  padding: 26px 75px 15px 52px;
+  border-top: 1px solid #c9c9c9;
+  height: 200px;
+}
+footer .business img {
+  margin-bottom: 40px;
+}
+footer .business p {
+  color: #333;
+  font-size: 13px;
+  line-height: 2;
+}
+.business {
+  float: left;
+}
+.contact {
+  float: left;
+}
+.contact ul {
+  margin-top: 44px;
+}
+.contact li {
+  float: left;
+  width: 180px;
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
+}
+.contact a {
+  color: #333;
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: center;
+}
+.contact div {
+  font-size: 8px;
+  /* text-align: center; */
+}
+.contact li::after {
+  content: "";
+  width: 0px;
+  height: 16px;
+  border-left: 1px solid #000;
+  position: absolute;
+  top: 6px;
+  right: 0;
+}
+.contact li:last-child::after {
+  border: none;
+}
+.contact ul {
+  width: 818px;
+  margin-left: 40px;
+}
+.hover-box {
+  padding: 12px;
+  position: relative;
+  top: 10px;
+  background-color: #fff;
+  box-shadow: 0px 1px 12px 0px rgba(128, 113, 113, 0.3);
+  border-radius: 10px;
+  display: none;
+}
+.hover-box::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  /* border: 10px solid #ccc; */
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  width: 0;
+  height: 0;
+}
+.hover-box a {
+  font-size: 15px;
+  line-height: 2;
+}
+.hover-box a:hover {
+  color: #d3b145;
+}
+.contact li:last-child:hover > .hover-box {
+  display: block;
+}
+.address {
+  float: left;
+}
+.logo-company {
+  margin-bottom: 22px;
+}
+.logo-company a {
+  margin-right: 40px;
+  position: relative;
+}
+.logo-company a > img {
+  width: 40px;
+  height: 40px;
+}
+.weibo {
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 10px solid #e0e0e0;
+  border-radius: 10px;
+  display: none;
+}
+.logo-company a:hover > .weibo {
+  display: block;
+}
+.weibo img {
+  width: 90px;
+  height: 90px;
+}
+.book-footer {
+  line-height: 2;
+  font-size: 13px;
+  color: #333;
+}
+.service {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.bj {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* opacity: 0.3; */
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+}
+/* 地址选择 */
+.homeAddressSelect {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 450px;
+  background-size: 100%;
+  z-index: 100000000;
+  background-image: url(../images/selectBg.png);
+  text-align: center;
+}
+.homeAddressSelect img {
+  margin-top: 80px;
+}
+.homeAddressSelect div:nth-child(2) {
+  margin-top: 30px;
+  color: #333;
+  font-size: 19px;
+  line-height: 1.5;
+}
+.homeAddressSelect div:nth-child(3) {
+  font-size: 15px;
+  color: #c8b186;
+}
+.pop-input-wrapper {
+  margin-top: 33px;
+  padding: 0 115px;
+}
+.pop-input-wrapper select {
+  width: 317px;
+  height: 57px;
+  line-height: 57px;
+  border-radius: 5px;
+  padding-left: 20px;
+  border: solid 1px #d9d9d9;
+  font-size: 16px;
+  outline: none;
+  background-image: url(../images/down-icon@2.png);
+  background-repeat: no-repeat;
+  background-size: 12px 13px;
+  background-position: 290px 25px;
+  border: solid 1px #d9d9d9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.begin {
+  margin-top: 34px;
+}
+.begin a {
+  margin: 0 auto;
+  width: 128px;
+  display: block;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  font-size: 16px;
+  color: #fffefe;
+  border-radius: 5px;
+  background-color: #333333;
 }

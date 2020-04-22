@@ -11,6 +11,28 @@
     <link rel="stylesheet" href=".//css/index.css" />
   </head>
   <body>
+    <!-- 地址选择 -->
+    <div class="bj">
+      <div class="homeAddressSelect">
+        <img src="./images/LOGO-@2x.png" alt="" />
+        <div>请选择需要送货的城市</div>
+        <div>PLEASE SELECT THE DELIVERY CITY</div>
+
+        <div class="pop-input-wrapper">
+          <select name="" id="">
+            <option value="">北京市</option>
+            <option value="">上海市</option>
+            <option value="">天津市</option>
+            <option value="">沈阳市</option>
+            <option value="">成都市</option>
+            <option value="">杭州市</option>
+          </select>
+        </div>
+        <div class="begin">
+          <a href="javascript:;">开始购物</a>
+        </div>
+      </div>
+    </div>
     <!-- 顶部导航栏 -->
     <div class="top">
       <header class="clearfix">
@@ -112,8 +134,7 @@
                 <div></div>
               </div>
               <span class="header-controller-cart-text">
-                购物车
-                <span> (0) </span>
+                购物车 <span> ( <b>0</b> ) </span>
               </span>
             </a>
           </div>
@@ -300,7 +321,7 @@
       <img src="./images/home-down-icon.png" alt="" />
     </div>
 
-    <div class="zoom-wrappers">
+    <div class="zoom-wrappers clearfix">
       <!-- 轮播图 -->
       <div class="top-pro-swipers clearfix top-pro-swiper">
         <img src="./images/left-go.png" alt="" class="left-go02 left-go" />
@@ -328,11 +349,78 @@
         </div>
         <img src="./images/right-go.png" alt="" class="right-go02 right-go" />
       </div>
+
+      <div class="size">
+        <p class="en-name">Versailles Gardens</p>
+        <p class="cn-name">凡尔赛花园</p>
+        <div class="price-wrap-money">
+          <span class="small">¥</span>
+          <span class="big">268</span>
+        </div>
+        <p class="cake-type">Cake type | 蛋糕种类</p>
+        <p class="cake-small-name">豆沙裱花</p>
+        <div class="cake-num">
+          <span class="label">数量：</span>
+          <input type="text" value="1" />
+          <img src="./images/double-icon.png" alt="" />
+        </div>
+
+        <div class="cake-size">
+          <span class="label">尺寸：</span>
+          <input type="text" value="6寸" class="sizes" />
+          <img src="./images/double-icon.png" alt="" />
+          <div class="cake-size2" id="twos">
+            <ul>
+              <li>6寸</li>
+              <li>8寸</li>
+              <li>9寸</li>
+            </ul>
+          </div>
+        </div>
+        <div class="eat-people">适合4-8人食用 含10套餐具</div>
+        <div class="cake-book">
+          需提前5小时预订
+        </div>
+        <div class="buy-btn">
+          <button class="join-cart">
+            <img src="./images/btn-cart-icon.png" alt="" />
+            <div class="join-cart-text">加入购物车</div>
+          </button>
+          <button class="buy-now">立即购买</button>
+        </div>
+        <div class="sweet-level">
+          Sweetness level | 甜度
+        </div>
+        <div class="stars">
+          <img src="./images/star-icon.png" alt="" />
+          <img src="./images/star-icon.png" alt="" />
+          <img src="./images/star-icon.png" alt="" />
+          <img src="./images/star-light-icon.png" alt="" />
+          <img src="./images/star-light-icon.png" alt="" />
+        </div>
+        <div class="store">
+          Preservation conditions｜保鲜条件
+        </div>
+        <div class="store-desc">
+          最佳保存温度0°C，最佳赏味期为24小时内 <br />
+          食用前请在室温下放置20分钟，口感更佳
+        </div>
+        <a href="">
+          <button class="more-btn">
+            了解更多>>
+          </button>
+        </a>
+      </div>
     </div>
     <script>
       $(".zoom-wrappers").css("display", "none");
       $(".pr2").click(function () {
         $(".zoom-wrappers").slideToggle(1000);
+      });
+
+      $("#twos li").click(function () {
+        $(".sizes").prop("value", $(this).text());
+        // console.log($(this).text());
       });
     </script>
     <!-- 轮播图 -->
@@ -367,5 +455,112 @@
         }, 3000);
       });
     </script>
+    <!-- 主厨推荐 -->
+    <div class="main-pic">
+      <h2 class="main-title">主厨推荐</h2>
+
+      <div class="main-photo">
+        <a href=""> <img src="./images/tuijian01.jpg" alt="" /></a>
+        <a href=""> <img src="./images/tuijian02.jpg" alt="" /></a>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="clearfix">
+      <!-- 左 -->
+      <div class="business">
+        <img src="./images/nav-logo.png" alt="" />
+        <p>食品经营许可证</p>
+        <p>北京快乐佳焙餐饮管理有限公司</p>
+        <p>统一社会信用代码：91110105318132994J</p>
+      </div>
+      <!-- 中 -->
+      <div class="contact">
+        <ul>
+          <li>
+            <a href="#">
+              联系我们
+              <div>Contact us</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              订购帮助
+              <div>Purchasing Helper</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              品牌故事
+              <div>Brand story</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              企业专区
+              <div>Enterprise Column</div>
+            </a>
+            <div class="hover-box">
+              <a href="javascript:;">企业福利</a> <br />
+              <a href="javascript:;">明星试吃员</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- 右 -->
+      <div class="address">
+        <div class="logo-company">
+          <a href="javascript:;">
+            <img src="./images/weibo-icon.png" alt="" class="icon" />
+            <div class="weibo">
+              <img src="./images/wobo.png" alt="" />
+            </div>
+          </a>
+          <a href="javascript:;">
+            <img src="./images/wx-icon.png" alt="" />
+            <div class="weibo">
+              <img src="./images/weixin.jpg" alt="" />
+            </div>
+          </a>
+          <a href="javascript:;">
+            <img src="./images/tmall-icon.png" alt="" />
+            <div class="weibo">
+              <img src="./images/taobao.png" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="book-footer">
+          <p>预定电话：131-6111-7513 400-900-6177</p>
+          <p>北京市朝阳区建国路89号院16号楼622号</p>
+          <p>官方微信：boncakekefu1</p>
+          <p>请提前24小时预定</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 在线客服 -->
+
+    <a href="javascript:;" class="service">
+      <img src="./images/kf.png" alt="" />
+    </a>
   </body>
+  <script>
+    // 点击开始购物关闭地址选择
+    $(".begin").click(function () {
+      $(".bj").hide();
+    });
+    // 点击加入购物车改变购物车商品数累
+
+    $(".join-cart").click(function () {
+      let a = $(this)
+        .parent(".buy-btn")
+        .prevAll(".cake-num")
+        .children("input")
+        .val();
+
+      $(".header-controller-cart-text span b").html(
+        Number(a) + Number($(".header-controller-cart-text span b").html())
+      );
+    });
+  </script>
 </html>
