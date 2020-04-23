@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BON CAKE官网-高颜值的甜</title>
+    <link rel="shortcut icon" href="./images/logol.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./lib/normalize.css" />
+    <!-- 活动验证css -->
+    <link rel="stylesheet" href="./css/dragverify.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+  </head>
+  <body>
+    <!-- 顶部导航栏 -->
+    <div class="top">
+      <header class="clearfix">
+        <!-- logo -->
+        <a href="./index.html" class="nav-logo">
+          <img src="./images/nav-logo.png" alt="" />
+        </a>
+        <!-- 顶部中间 -->
+        <nav class="nav-menu">
+          <a href="./index.html">
+            <span>首页</span>
+            <span> HOME </span>
+          </a>
+          <a href="">
+            <span>所有商品</span>
+            <span> PRODUCTS </span>
+          </a>
+          <a href="">
+            <span>下午茶点</span>
+            <span> TEA TIME</span>
+          </a>
+          <a href="">
+            <span>生如夏花</span>
+            <span> SUMMER FLOWERS</span>
+          </a>
+          <a href="">
+            <span>双层定制</span>
+            <span> CUSTOMIZED PRO </span>
+          </a>
+        </nav>
+        <!-- 顶部竖线 -->
+        <img src="./images/cut-line.png" alt="" class="header-cut-line" />
+        <!-- 顶部右端 -->
+        <div class="header-controller">
+          <!-- 登录 -->
+          <div class="header-controller-login">
+            <a href="">
+              <img src="./images/login-icon.png" alt="" />
+              <span> 登录</span>
+            </a>
+          </div>
+          <!-- 注册 -->
+          <div class="header-controller-register">
+            <a href="">
+              <img src="./images/register-icon.png" alt="" />
+              <span>注册</span>
+            </a>
+          </div>
+          <!-- 地址 -->
+          <div class="header_position">
+            <img src="./images/beijng.png" alt="" />
+            <span>北京市</span>
+            <img src="./images/pull-down.png" alt="" />
+            <!-- 隐藏的地址 -->
+            <ul class="header_position-area-list">
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/beijng.png" alt="" />
+                  北京市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/shanghai.png" alt="" />
+                  上海市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/tianjin.png" alt="" />
+                  天津市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/shenyang.png" alt="" />
+                  沈阳市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/chengdu.jpg" alt="" />
+                  成都市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/hangzhou.png" alt="" />
+                  杭州市
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- 购物车 -->
+          <div class="header-controller-cart">
+            <a href="">
+              <div class="header-controller-cart-icon">
+                <img src="./images/cart-icon.png" alt="" />
+                <div></div>
+              </div>
+              <span class="header-controller-cart-text">
+                购物车 <span> ( <b>0</b> ) </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- 引入jquery -->
+    <script src="./lib/jquery/jquery-3.4.1.min.js"></script>
+    <script>
+      // 点击header_position-area-list里面的地址上面的地址会改成这个地址图片也会改动
+      $(".header_position-area-list li a").on("click", function () {
+        // 改变文本
+        $(".header_position span").html($(this).text());
+        // 获取点击图片的路径
+        let ImgSrc = $(this).children("img").attr("src");
+        // 改变图片路径
+        $(".header_position img:first-child").attr("src", ImgSrc);
+      });
+    </script>
+
+    <!-- 登录 -->
+    <div class="register">
+      <img src="./images/register-text.png" alt="" />
+      <p>高／颜／值／的／甜</p>
+      <div class="square-bg"></div>
+      <div class="yellow-bg">
+        <div class="register-form">
+          <form action="">
+            <div class="register-tab">
+              <span class="name">账号密码登录</span>
+              <span> | </span>
+              <span class="password">手机验证码登录</span>
+            </div>
+            <div class="one">
+              <input
+                type="text"
+                name="name"
+                placeholder="用户名/邮箱地址/手机号"
+                class="register-name"
+              />
+              <input
+                type="password"
+                name="password"
+                placeholder="请输入您的密码"
+                class="register-password"
+              />
+            </div>
+
+            <div class="two">
+              <input type="text" placeholder="请输入您的手机号" class="phone" />
+              <!-- 滑动验证 -->
+              <div id="dragverify"></div>
+              <div class="register-code">
+                <input type="text" placeholder="请输入短信验证码" />
+
+                <a href="javascript:;">
+                  <span class="btn">获取验证码</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="login-btn">登录</div>
+          </form>
+          <div class="modal-footer clearfix">
+            <div class="pwd-opt">
+              <input type="checkbox" />
+              <span>记住密码</span>
+            </div>
+            <div class="forget-pwd">
+              <a href="javascript:;">忘记密码</a>
+              <a href="javascript:;">去注册</a>
+            </div>
+            <div class="cut-line">
+              <img src="./images/line-pic.png" alt="" />
+              <b>快捷登录</b>
+              <img src="./images/line-pic.png" alt="" />
+            </div>
+            <a
+              href="https://open.weixin.qq.com/connect/qrconnect?appid=wx80f5e33b92119a53&response_type=code&scope=snsapi_login&redirect_uri=https%3A%2F%2Fwww.boncake.com.cn%2Findex.php%2Fopenapi%2Ftrustlogin_api%2Fparse%2Ftrustlogin_plugin_weixin%2Fcallback%2F&state=5f6e8853fa57eab15b1405d3e913dca1"
+              class="wx-chat"
+            >
+              <img src="./images/wx-chat.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="clearfix">
+      <!-- 左 -->
+      <div class="business">
+        <img src="./images/nav-logo.png" alt="" />
+        <p>食品经营许可证</p>
+        <p>北京快乐佳焙餐饮管理有限公司</p>
+        <p>统一社会信用代码：91110105318132994J</p>
+      </div>
+      <!-- 中 -->
+      <div class="contact">
+        <ul>
+          <li>
+            <a href="#">
+              联系我们
+              <div>Contact us</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              订购帮助
+              <div>Purchasing Helper</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              品牌故事
+              <div>Brand story</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              企业专区
+              <div>Enterprise Column</div>
+            </a>
+            <div class="hover-box">
+              <a href="javascript:;">企业福利</a> <br />
+              <a href="javascript:;">明星试吃员</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- 右 -->
+      <div class="address">
+        <div class="logo-company">
+          <a href="javascript:;">
+            <img src="./images/weibo-icon.png" alt="" class="icon" />
+            <div class="weibo">
+              <img src="./images/wobo.png" alt="" />
+            </div>
+          </a>
+          <a href="javascript:;">
+            <img src="./images/wx-icon.png" alt="" />
+            <div class="weibo">
+              <img src="./images/weixin.jpg" alt="" />
+            </div>
+          </a>
+          <a href="javascript:;">
+            <img src="./images/tmall-icon.png" alt="" />
+            <div class="weibo">
+              <img src="./images/taobao.png" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="book-footer">
+          <p>预定电话：131-6111-7513 400-900-6177</p>
+          <p>北京市朝阳区建国路89号院16号楼622号</p>
+          <p>官方微信：boncakekefu1</p>
+          <p>请提前24小时预定</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 在线客服 -->
+
+    <a href="javascript:;" class="service">
+      <img src="./images/kf.png" alt="" />
+    </a>
+    <!-- 表单验证插件 -->
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/dragverify.js"></script>
+    <script>
+      // 账号登录和手机登录验证切换
+      $(".name").click(function () {
+        $(".two").hide();
+        $(".one").show();
+        $(this).css("color", "#d3b145");
+        $(".password").css("color", "#333");
+      });
+
+      $(".password").click(function () {
+        $(this).css("color", "#d3b145");
+        $(".name").css("color", "#333");
+        $(".one").hide();
+        $(".two").show().css("color", "#d3b145");
+      });
+
+      $(".register-code a").click(function () {
+        if ($(".dragverifytext").text() == "验证通过") {
+          if ($(".phone").val().trim().length == 11) {
+            // 倒计时
+            // 1.获取元素: 按钮
+            let oBtn = document.querySelector(".btn");
+            // 2.设置倒计时总时间
+            let time = 60;
+            // 3.设置定时器的名字
+            let timer = null;
+            // 4.给按钮添加点击事件
+            oBtn.onclick = function () {
+              // 4.1 按钮就要禁用了
+              this.disabled = true;
+              // 4.2 开始定时器了
+              timer = setInterval(function () {
+                // 4.2.1 判断总时间是不是倒计时到0了 如果倒计时到0   停定时器  按钮恢复原状
+                if (time <= 0) {
+                  // 按钮不禁用
+                  // console.log(this);
+                  oBtn.disabled = false;
+                  // 清除定时器
+                  clearInterval(timer);
+                  // 按钮恢复原状
+                  oBtn.innerHTML = "获取验证码";
+                  // bug解决: 如果为0了 再次点击会不动 复原总的时间
+                  time = 10;
+                } else {
+                  // 4.2.2 如果没到0 倒计时 递减  还要告诉用户还剩多少秒
+                  oBtn.innerHTML = `还剩下${time}秒`;
+                  time--;
+                }
+              }, 1000);
+            };
+          } else {
+            alert("请输入正确的手机号");
+          }
+        } else {
+          alert("滑动验证");
+        }
+      });
+      // 点击登录的时候
+      $(".login-btn").click(function () {
+        if ($(".one").css("display") == "none") {
+          if ($(".dragverifytext").text() == "验证通过") {
+            if ($(".register-code input").val().trim().length == 0) {
+              alert("请输入验证码");
+            }
+          } else {
+            alert("滑动验证");
+          }
+        } else {
+          if (
+            $(".one input").val().trim().length == 0 ||
+            $(".one input:last-child").val().trim().length == 0
+          ) {
+            alert("账号密码不能为空");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

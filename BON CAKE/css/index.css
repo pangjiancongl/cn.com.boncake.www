@@ -391,6 +391,7 @@ header {
   margin-left: 30px;
   margin-right: 20px;
 }
+/* 底部 */
 footer {
   margin-top: 100px;
   /* width: 100%; */
@@ -515,6 +516,7 @@ footer .business p {
   font-size: 13px;
   color: #333;
 }
+/* 在线客服 */
 .service {
   position: fixed;
   bottom: 0;
