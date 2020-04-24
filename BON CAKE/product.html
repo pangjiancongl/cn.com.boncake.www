@@ -3,36 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BON CAKE官网-高颜值的甜</title>
+    <title>桃李春风_BONCAKE</title>
     <link rel="shortcut icon" href="./images/logol.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./lib/normalize.css" />
-    <!-- 放大镜css -->
+    <!-- 放大镜插件 -->
     <link rel="stylesheet" href="./css/jquery.exzoom.css" />
-    <link rel="stylesheet" href=".//css/index.css" />
+    <link rel="stylesheet" href="./css/product.css" />
   </head>
   <body>
-    <!-- 地址选择 -->
-    <div class="bj">
-      <div class="homeAddressSelect">
-        <img src="./images/LOGO-@2x.png" alt="" />
-        <div>请选择需要送货的城市</div>
-        <div>PLEASE SELECT THE DELIVERY CITY</div>
-
-        <div class="pop-input-wrapper">
-          <select name="" id="">
-            <option value="">北京市</option>
-            <option value="">上海市</option>
-            <option value="">天津市</option>
-            <option value="">沈阳市</option>
-            <option value="">成都市</option>
-            <option value="">杭州市</option>
-          </select>
-        </div>
-        <div class="begin">
-          <a href="javascript:;">开始购物</a>
-        </div>
-      </div>
-    </div>
     <!-- 顶部导航栏 -->
     <div class="top">
       <header class="clearfix">
@@ -154,51 +132,16 @@
         $(".header_position img:first-child").attr("src", ImgSrc);
       });
     </script>
-    <!-- 商品 -->
-    <!-- 显示出来的广告 -->
-    <div class="pr">
-      <div class="swiper-slide">
-        <img src="./images/bj-01.jpg" alt="" />
-      </div>
-      <img src="./images/home-down-icon.png" alt="" />
-    </div>
+
     <!-- 隐藏的商品 -->
     <div class="zoom-wrapper clearfix">
-      <!-- 轮播图 -->
-      <div class="top-pro-swiper clearfix">
-        <img src="./images/left-go.png" alt="" class="left-go" />
-        <div class="zoom-wrapper-top">
-          <ul>
-            <li>
-              <img src="./images/shop01.jpg" alt="" />
-            </li>
-            <li>
-              <img src="./images/shop01.jpg" alt="" />
-            </li>
-            <li>
-              <img src="./images/shop01.jpg" alt="" />
-            </li>
-            <li>
-              <img src="./images/shop01.jpg" alt="" />
-            </li>
-            <li>
-              <img src="./images/shop01.jpg" alt="" />
-            </li>
-            <li>
-              <img src="./images/shop01.jpg" alt="" />
-            </li>
-          </ul>
-        </div>
-        <img src="./images/right-go.png" alt="" class="right-go" />
-      </div>
-
       <!-- 缩放图 -->
       <div class="spec-preview">
         <div class="exzoom" id="exzoom">
           <!--大图区域-->
           <div class="exzoom_img_box">
             <ul class="exzoom_img_ul">
-              <li><img src=".//images/suofang01.jpg" /></li>
+              <li><img src="./images/shops.jpg" /></li>
               <li><img src="./images/suofang02.jpg" alt="" /></li>
               <li><img src="./images/suofang03.jpg" alt="" /></li>
             </ul>
@@ -208,11 +151,11 @@
         </div>
       </div>
       <div class="size">
-        <p class="en-name">Alice ' s Song</p>
-        <p class="cn-name">爱丽丝的歌</p>
+        <p class="en-name">Sweet Spring Breeze</p>
+        <p class="cn-name">桃李春风</p>
         <div class="price-wrap-money">
           <span class="small">¥</span>
-          <span class="big">198</span>
+          <span class="big">238</span>
         </div>
         <p class="cake-type">Cake type | 蛋糕种类</p>
         <p class="cake-small-name">豆沙裱花</p>
@@ -230,7 +173,7 @@
         </div>
         <div class="eat-people">9只</div>
         <div class="cake-book">
-          需提前5小时预订
+          10:00 - 20:00
         </div>
         <div class="buy-btn">
           <button class="join-cart">
@@ -263,205 +206,135 @@
         </a>
       </div>
     </div>
-    <!-- 轮播图js -->
-    <script>
-      let num = 0;
-      $(".right-go").click(function () {
-        num++;
-        if (num > 2) {
-          num = 0;
-        }
-        $(".zoom-wrapper-top ul").animate({
-          left: -95 * num,
-        });
-      });
-      $(".left-go").click(function () {
-        num--;
-        if (num < 0) {
-          num = 2;
-        }
-        $(".zoom-wrapper-top ul").animate({
-          left: -95 * num,
-        });
-      });
-      let timer = setInterval(function () {
-        $(".right-go").click();
-      }, 3000);
-      $(".top-pro-swiper").mousemove(function () {
-        clearInterval(timer);
-      });
-      $(".top-pro-swiper").mouseout(function () {
-        clearInterval(timer);
-        timer = setInterval(function () {
-          $(".right-go").click();
-        }, 3000);
-      });
-    </script>
 
-    <!-- 放大镜插件 -->
-    <script src="./lib/jquery.exzoom.js"></script>
-    <script>
-      $("#exzoom").exzoom(
-        (defaults = {
-          navWidth: 60, //列表每个宽度,该版本中请把宽高填写成一样
-          navHeight: 60, //列表每个高度,该版本中请把宽高填写成一样
-          autoPlay: false, //是否自动播放
-          navBorder: 0, //列表边框，没有边框填写0，边框在css中修改
-        })
-      );
-      $(".zoom-wrapper").css("display", "none");
-      $(".pr").click(function () {
-        $(".zoom-wrapper").slideToggle(1000);
-      });
-    </script>
-    <div class="pr2">
-      <div class="swiper-slide">
-        <img src="./images/bj-02.jpg" alt="" />
-      </div>
-      <img src="./images/home-down-icon.png" alt="" />
-    </div>
+    <!-- 推荐 -->
 
-    <div class="zoom-wrappers clearfix">
-      <!-- 轮播图 -->
-      <div class="top-pro-swipers clearfix top-pro-swiper">
-        <img src="./images/left-go.png" alt="" class="left-go02 left-go" />
-        <div class="zoom-wrapper-tops zoom-wrapper-top">
-          <ul>
+    <div class="part2 clearfix">
+      <div class="part2-left">
+        <h2>热门推荐</h2>
+
+        <div class="product">
+          <ul class="clearfix">
             <li>
-              <img src="./images/shop07.jpg" alt="" />
+              <a href="javascript:;" class="pro-img-box">
+                <img src="./images/product01.jpg" alt="" />
+              </a>
+              <div class="pro-media-desc">
+                <div class="pro-en-name">
+                  Sweet Spring Breeze
+                </div>
+                <div class="pro-zh-name">
+                  桃李春风
+                </div>
+                <div class="pro-price">
+                  ￥238
+                </div>
+                <button class="pro-buy">
+                  <img src="./images/btn-cart-icon.png" alt="" />
+                  <span>购买</span>
+                </button>
+              </div>
             </li>
             <li>
-              <img src="./images/shop08.jpg" alt="" />
+              <a href="javascript:;" class="pro-img-box">
+                <img src="./images/product02.jpg" alt="" />
+              </a>
+              <div class="pro-media-desc">
+                <div class="pro-en-name">
+                  Spring Breeze
+                </div>
+                <div class="pro-zh-name">
+                  如沐春风
+                </div>
+                <div class="pro-price">
+                  ￥238
+                </div>
+                <button class="pro-buy">
+                  <img src="./images/btn-cart-icon.png" alt="" />
+                  <span>购买</span>
+                </button>
+              </div>
             </li>
             <li>
-              <img src="./images/shop09.jpg" alt="" />
+              <a href="javascript:;" class="pro-img-box">
+                <img src="./images/product03.jpg" alt="" />
+              </a>
+              <div class="pro-media-desc">
+                <div class="pro-en-name">
+                  Faith Of Love
+                </div>
+                <div class="pro-zh-name">
+                  爱的信仰
+                </div>
+                <div class="pro-price">
+                  ￥238
+                </div>
+                <button class="pro-buy">
+                  <img src="./images/btn-cart-icon.png" alt="" />
+                  <span>购买</span>
+                </button>
+              </div>
             </li>
             <li>
-              <img src="./images/shop10.jpg" alt="" />
-            </li>
-            <li>
-              <img src="./images/shop11.jpg" alt="" />
-            </li>
-            <li>
-              <img src="./images/shop12.jpg" alt="" />
+              <a href="javascript:;" class="pro-img-box">
+                <img src="./images/product01.jpg" alt="" />
+              </a>
+              <div class="pro-media-desc">
+                <div class="pro-en-name">
+                  Alice ' s Song
+                </div>
+                <div class="pro-zh-name">
+                  爱丽丝的歌
+                </div>
+                <div class="pro-price">
+                  ￥198
+                </div>
+                <button class="pro-buy">
+                  <img src="./images/btn-cart-icon.png" alt="" />
+                  <span>购买</span>
+                </button>
+              </div>
             </li>
           </ul>
         </div>
-        <img src="./images/right-go.png" alt="" class="right-go02 right-go" />
       </div>
-
-      <div class="size">
-        <p class="en-name">Versailles Gardens</p>
-        <p class="cn-name">凡尔赛花园</p>
-        <div class="price-wrap-money">
-          <span class="small">¥</span>
-          <span class="big">268</span>
+      <div class="part2-right">
+        <div class="idea-title">
+          <ul>
+            <li>
+              <span class="title-item-text wei">优质原材料</span>
+              <span class="title-item-en">RAW MATERIALS</span>
+            </li>
+            <li>
+              <span class="title-item-text">设计理念</span>
+              <span class="title-item-en">&nbsp; &nbsp;INSPIRATION</span>
+            </li>
+            <li>
+              <span class="title-item-text">为爱发声</span>
+              <span class="title-item-en">VOICE FOR LOVE</span>
+            </li>
+            <li>
+              <span class="title-item-text">为爱发声</span>
+              <span class="title-item-en">VOICE FOR LOVE</span>
+            </li>
+          </ul>
         </div>
-        <p class="cake-type">Cake type | 蛋糕种类</p>
-        <p class="cake-small-name">豆沙裱花</p>
-        <div class="cake-num">
-          <span class="label">数量：</span>
-          <input type="text" value="1" />
-          <img src="./images/double-icon.png" alt="" />
+        <div class="idea-content">
+          <ul>
+            <li>
+              <img src="./images/xiangqing04.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/xiangqing03.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/xiangqing01.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/xiangqing02.jpg" alt="" />
+            </li>
+          </ul>
         </div>
-
-        <div class="cake-size">
-          <span class="label">尺寸：</span>
-          <input type="text" value="6寸" class="sizes" />
-          <img src="./images/double-icon.png" alt="" />
-          <div class="cake-size2" id="twos">
-            <ul>
-              <li>6寸</li>
-              <li>8寸</li>
-              <li>9寸</li>
-            </ul>
-          </div>
-        </div>
-        <div class="eat-people">适合4-8人食用 含10套餐具</div>
-        <div class="cake-book">
-          需提前5小时预订
-        </div>
-        <div class="buy-btn">
-          <button class="join-cart">
-            <img src="./images/btn-cart-icon.png" alt="" />
-            <div class="join-cart-text">加入购物车</div>
-          </button>
-          <button class="buy-now">立即购买</button>
-        </div>
-        <div class="sweet-level">
-          Sweetness level | 甜度
-        </div>
-        <div class="stars">
-          <img src="./images/star-icon.png" alt="" />
-          <img src="./images/star-icon.png" alt="" />
-          <img src="./images/star-icon.png" alt="" />
-          <img src="./images/star-light-icon.png" alt="" />
-          <img src="./images/star-light-icon.png" alt="" />
-        </div>
-        <div class="store">
-          Preservation conditions｜保鲜条件
-        </div>
-        <div class="store-desc">
-          最佳保存温度0°C，最佳赏味期为24小时内 <br />
-          食用前请在室温下放置20分钟，口感更佳
-        </div>
-        <a href="">
-          <button class="more-btn">
-            了解更多>>
-          </button>
-        </a>
-      </div>
-    </div>
-    <script>
-      $(".zoom-wrappers").css("display", "none");
-      $(".pr2").click(function () {
-        $(".zoom-wrappers").slideToggle(1000);
-      });
-
-      $("#twos li").click(function () {
-        $(".sizes").prop("value", $(this).text());
-        // console.log($(this).text());
-      });
-    </script>
-    <!-- 轮播图 -->
-    <script>
-      let nun = 0;
-      // clearInterval(timer);
-      $(".right-go02").click(function () {
-        nun++;
-        if (nun > 2) {
-          nun = 0;
-        }
-        $(".zoom-wrapper-tops ul").animate({
-          left: -95 * nun,
-        });
-      });
-      $(".left-go02").click(function () {
-        nun--;
-        if (nun < 0) {
-          nun = 2;
-        }
-        $(".zoom-wrapper-tops ul").animate({
-          left: -95 * nun,
-        });
-      });
-      $(".top-pro-swipers").mousemove(function () {
-        clearInterval(timer);
-      });
-      $(".top-pro-swipers").mouseout(function () {
-        clearInterval(timer);
-        timer = setInterval(function () {
-          $(".right-go02").click();
-        }, 3000);
-      });
-    </script>
-    <!-- 主厨推荐 -->
-    <div class="main-pic">
-      <h2 class="main-title">主厨推荐</h2>
-
-      <div class="main-photo">
-        <a href=""> <img src="./images/tuijian01.jpg" alt="" /></a>
-        <a href=""> <img src="./images/tuijian02.jpg" alt="" /></a>
       </div>
     </div>
 
@@ -543,24 +416,32 @@
     <a href="javascript:;" class="service">
       <img src="./images/kf.png" alt="" />
     </a>
-  </body>
-  <script>
-    // 点击开始购物关闭地址选择
-    $(".begin").click(function () {
-      $(".bj").hide();
-    });
-    // 点击加入购物车改变购物车商品数累
-
-    $(".join-cart").click(function () {
-      let a = $(this)
-        .parent(".buy-btn")
-        .prevAll(".cake-num")
-        .children("input")
-        .val();
-
-      $(".header-controller-cart-text span b").html(
-        Number(a) + Number($(".header-controller-cart-text span b").html())
+    <!-- 放大镜插件 -->
+    <script src="./lib/jquery.exzoom.js"></script>
+    <script>
+      $("#exzoom").exzoom(
+        (defaults = {
+          navWidth: 76, //列表每个宽度,该版本中请把宽高填写成一样
+          navHeight: 76, //列表每个高度,该版本中请把宽高填写成一样
+          autoPlay: false, //是否自动播放
+          navBorder: 0, //列表边框，没有边框填写0，边框在css中修改
+        })
       );
-    });
-  </script>
+    </script>
+
+    <!-- 商品详情js -->
+    <!-- 点击标题，下面的内容就换成相关内容 -->
+
+    <script>
+      $(".idea-title li").click(function () {
+        let $index = $(this).index();
+        $(this).children(".title-item-text").addClass("wei");
+        $(this).children(".title-item-en").show();
+        $(this).siblings().children(".title-item-en").hide();
+        $(this).siblings().children(".title-item-text").removeClass("wei");
+        $(".idea-content li").eq($index).siblings("li").hide();
+        $(".idea-content li").eq($index).show();
+      });
+    </script>
+  </body>
 </html>

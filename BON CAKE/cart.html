@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>购物车_BON CAKE官网-高颜值的甜</title>
+    <link rel="shortcut icon" href="./images/logol.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./lib/normalize.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
+  </head>
+  <body>
+    <!-- 顶部导航栏 -->
+    <div class="top">
+      <header class="clearfix">
+        <!-- logo -->
+        <a href="./index.html" class="nav-logo">
+          <img src="./images/nav-logo.png" alt="" />
+        </a>
+        <!-- 顶部中间 -->
+        <nav class="nav-menu">
+          <a href="./index.html">
+            <span>首页</span>
+            <span class="active"> HOME </span>
+          </a>
+          <a href="">
+            <span>所有商品</span>
+            <span> PRODUCTS </span>
+          </a>
+          <a href="./galleryone.html">
+            <span>下午茶点</span>
+            <span> TEA TIME</span>
+          </a>
+          <a href="">
+            <span>生如夏花</span>
+            <span> SUMMER FLOWERS</span>
+          </a>
+          <a href="">
+            <span>双层定制</span>
+            <span> CUSTOMIZED PRO </span>
+          </a>
+        </nav>
+        <!-- 顶部竖线 -->
+        <img src="./images/cut-line.png" alt="" class="header-cut-line" />
+        <!-- 顶部右端 -->
+        <div class="header-controller">
+          <!-- 登录 -->
+          <div class="header-controller-login">
+            <a href="./register.html">
+              <img src="./images/login-icon.png" alt="" />
+              <span> 登录</span>
+            </a>
+          </div>
+          <!-- 注册 -->
+          <div class="header-controller-register">
+            <a href="">
+              <img src="./images/register-icon.png" alt="" />
+              <span>注册</span>
+            </a>
+          </div>
+          <!-- 地址 -->
+          <div class="header_position">
+            <img src="./images/beijng.png" alt="" />
+            <span>北京市</span>
+            <img src="./images/pull-down.png" alt="" />
+            <!-- 隐藏的地址 -->
+            <ul class="header_position-area-list">
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/beijng.png" alt="" />
+                  北京市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/shanghai.png" alt="" />
+                  上海市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/tianjin.png" alt="" />
+                  天津市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/shenyang.png" alt="" />
+                  沈阳市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/chengdu.jpg" alt="" />
+                  成都市
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="./images/hangzhou.png" alt="" />
+                  杭州市
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- 购物车 -->
+          <div class="header-controller-cart">
+            <a href="">
+              <div class="header-controller-cart-icon">
+                <img src="./images/cart-icon.png" alt="" />
+                <div></div>
+              </div>
+              <span class="header-controller-cart-text">
+                购物车 <span> ( <b>0</b> ) </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- 引入jquery -->
+    <script src="./lib/jquery/jquery-3.4.1.min.js"></script>
+    <script>
+      // 点击header_position-area-list里面的地址上面的地址会改成这个地址图片也会改动
+      $(".header_position-area-list li a").on("click", function () {
+        // 改变文本
+        $(".header_position span").html($(this).text());
+        // 获取点击图片的路径
+        let ImgSrc = $(this).children("img").attr("src");
+        // 改变图片路径
+        $(".header_position img:first-child").attr("src", ImgSrc);
+      });
+    </script>
+    <!-- 购物车商品 -->
+    <form action="" class="clearfix">
+      <div class="container clearfix">
+        <h2>购物车</h2>
+        <div class="shop">
+          <table>
+            <thead>
+              <tr class="one">
+                <td style="width: 18px;">
+                  <label for="" class="cart-checkbox-label">
+                    <input type="checkbox" />
+                    <i class="oBtn"></i>
+                  </label>
+                </td>
+                <td style="width: 172px;">商品</td>
+                <td style="width: 193px;"></td>
+                <td style="width: 210px;">生日牌/数字蜡烛</td>
+                <td style="width: 152px;">单价</td>
+                <td style="width: 135px;">数量</td>
+                <td style="width: 125px;">金额</td>
+                <td style="width: 168px;">操作</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <label for="" class="cart-checkbox-label">
+                    <input type="checkbox" />
+                    <i></i>
+                  </label>
+                </td>
+                <td>
+                  <a href="javascript:;">
+                    <img src="./images/cart01.jpg" alt="" />
+                  </a>
+                </td>
+                <td>
+                  <div class="desc-name">爱丽丝的歌</div>
+                  <div class="desc-size">尺寸：9只</div>
+                </td>
+                <td>
+                  <div class="mock-select">
+                    <span>编辑或选择</span>
+                    <img src="./images/pull-down.png" alt="" />
+                  </div>
+                  <ul class="mock-option">
+                    <li class="text">编辑或选择</li>
+                    <li class="text">生日快乐</li>
+                    <li class="text">happy birthday</li>
+                    <li>
+                      <input
+                        type="text"
+                        placeholder="最多可写八个字"
+                        maxlength="8"
+                      />
+                      <span class="bt">确定</span>
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <div class="td-price">￥<span>198</span></div>
+                </td>
+                <td>
+                  <div class="number-group">
+                    <input type="text" value="1" class="numbers" />
+                    <img src="./images/input-icon.png" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <div class="p-subtotal">￥<span>198</span></div>
+                </td>
+                <td class="x">
+                  <img src="./images/close-icon.png" alt="" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-content">
+          <div class="single-parts-title">
+            <span class="active">配件商品</span>
+            <span>配单商品</span>
+          </div>
+          <ul class="single-parts-goods">
+            <li>
+              <div class="goods-pic">
+                <img src="./images/cart02.jpg" alt="" />
+              </div>
+              <div class="goods-des">
+                <p>Cutlies</p>
+                <p>餐具（5份装）</p>
+                <div class="price">
+                  <span>¥</span>
+                  5.00
+                </div>
+                <div class="buy-btn">
+                  <img src="./images/cart-white.png" alt="" />
+                  <span>购买</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="goods-pic">
+                <img src="./images/cart03.jpg" alt="" />
+              </div>
+              <div class="goods-des">
+                <p>Cutlies</p>
+                <p>餐具（5份装）</p>
+                <div class="price">
+                  <span>¥</span>
+                  5.00
+                </div>
+                <div class="buy-btn">
+                  <img src="./images/cart-white.png" alt="" />
+                  <span>购买</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="single-parts-goods" style="display: none;">
+            <li>
+              <div class="goods-pic">
+                <img src="./images/cart04.jpg" alt="" />
+              </div>
+              <div class="goods-des">
+                <p>Cutlies</p>
+                <p>餐具（5份装）</p>
+                <div class="price">
+                  <span>¥</span>
+                  5.00
+                </div>
+                <div class="buy-btn">
+                  <img src="./images/cart-white.png" alt="" />
+                  <span>购买</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="goods-pic">
+                <img src="./images/cart05.jpg" alt="" />
+              </div>
+              <div class="goods-des">
+                <p>Cutlies</p>
+                <p>餐具（5份装）</p>
+                <div class="price">
+                  <span>¥</span>
+                  5.00
+                </div>
+                <div class="buy-btn">
+                  <img src="./images/cart-white.png" alt="" />
+                  <span>购买</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="sum-list">
+            <div class="goods-money">
+              <span>商品金额：</span>
+              <span>￥</span><span class="moneyss">203</span>
+            </div>
+            <div class="discount">
+              <span>优惠金额：</span>
+              <span>￥0</span>
+            </div>
+            <div class="balance-cut-line"></div>
+            <div class="sum-money">
+              <span>(订单可得积分：<span class="fen">203</span> )合计：</span>
+              <span>￥</span><span class="moneyss">203</span>
+            </div>
+            <div class="balance-desc">活动 ：储值最高可送￥1248</div>
+            <div class="balance-btn">去结算</div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- 底部 -->
+    <footer class="clearfix">
+      <!-- 左 -->
+      <div class="business">
+        <img src="./images/nav-logo.png" alt="" />
+        <p>食品经营许可证</p>
+        <p>北京快乐佳焙餐饮管理有限公司</p>
+        <p>统一社会信用代码：91110105318132994J</p>
+      </div>
+      <!-- 中 -->
+      <div class="contact">
+        <ul>
+          <li>
+            <a href="#">
+              联系我们
+              <div>Contact us</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              订购帮助
+              <div>Purchasing Helper</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              品牌故事
+              <div>Brand story</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              企业专区
+              <div>Enterprise Column</div>
+            </a>
+            <div class="hover-box">
+              <a href="javascript:;">企业福利</a> <br />
+              <a href="javascript:;">明星试吃员</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- 右 -->
+      <div class="address">
+        <div class="logo-company">
+          <a href="javascript:;">
+            <img src="./images/weibo-icon.png" alt="" class="icon" />
+            <div class="weibo">
+              <img src="./images/wobo.png" alt="" />
+            </div>
+          </a>
+          <a href="javascript:;">
+            <img src="./images/wx-icon.png" alt="" />
+            <div class="weibo">
+              <img src="./images/weixin.jpg" alt="" />
+            </div>
+          </a>
+          <a href="javascript:;">
+            <img src="./images/tmall-icon.png" alt="" />
+            <div class="weibo">
+              <img src="./images/taobao.png" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="book-footer">
+          <p>预定电话：131-6111-7513 400-900-6177</p>
+          <p>北京市朝阳区建国路89号院16号楼622号</p>
+          <p>官方微信：boncakekefu1</p>
+          <p>请提前24小时预定</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 在线客服 -->
+
+    <a href="javascript:;" class="service">
+      <img src="./images/kf.png" alt="" />
+    </a>
+    <script>
+      // 全选
+      let flag = true;
+      $(".cart-checkbox-label i").click(function () {
+        $(this).toggleClass("btn");
+      });
+      $("tbody i").click(function () {
+        if ($("tbody i").length == $("tbody .btn").length) {
+          $(".oBtn").addClass("btn");
+        } else {
+          $(".oBtn").removeClass("btn");
+        }
+      });
+
+      $(".oBtn").click(function () {
+        if (flag) {
+          $(".cart-checkbox-label i").addClass("btn");
+          flag = false;
+        } else {
+          $(".cart-checkbox-label i").removeClass("btn");
+          flag = true;
+        }
+      });
+
+      //   下拉菜单留言
+      $(".mock-select").click(function () {
+        $(".mock-option").show();
+      });
+      $(".text").click(function () {
+        $(".mock-select span").text($(this).text());
+        $(".mock-option").hide();
+      });
+      $(".bt").click(function () {
+        $(".mock-select span").text($(this).prevAll("input").val());
+        $(".mock-option").hide();
+      });
+
+      //   数量增加
+      $(".number-group img").click(function () {
+        $(".number-group input").val(
+          Number($(".number-group input").val()) + 1
+        );
+        $(".moneyss").text(Number($(".p-subtotal span").text()) + 198);
+        $(".p-subtotal>span").text(Number($(".p-subtotal span").text()) + 198);
+        $(".fen").text(Number($(".p-subtotal span").text()));
+      });
+
+      $(".numbers").blur(function () {
+        // $(".td-price span").text(198 * Number($(".numbers").val()));
+        $(".p-subtotal span").text(198 * Number($(".numbers").val()));
+        $(".moneyss").text(Number($(".p-subtotal span").text()));
+        $(".fen").text(Number($(".p-subtotal span").text()));
+      });
+
+      //   点击x隐藏商品
+
+      $(".x img").click(function () {
+        $(this).parents("tr").hide();
+        console.log(1);
+      });
+
+      $(".single-parts-title span").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        let $index = $(this).index();
+        console.log($index);
+        $(".single-parts-goods").eq($index).show();
+        $(".single-parts-goods")
+          .eq($index)
+          .siblings(".single-parts-goods")
+          .hide();
+      });
+    </script>
+  </body>
+</html>
