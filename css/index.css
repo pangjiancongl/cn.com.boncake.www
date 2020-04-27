@@ -97,6 +97,9 @@ header {
 .header_position > img:first-child {
   width: 19px;
 }
+a {
+  color: #333;
+}
 .header_position-area-list {
   position: absolute;
   top: 50px;

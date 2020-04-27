@@ -46,7 +46,7 @@
             <span>首页</span>
             <span class="active"> HOME </span>
           </a>
-          <a href="">
+          <a href="./all.html">
             <span>所有商品</span>
             <span> PRODUCTS </span>
           </a>
@@ -54,11 +54,11 @@
             <span>下午茶点</span>
             <span> TEA TIME</span>
           </a>
-          <a href="">
+          <a href="./gallerytwo.htm">
             <span>生如夏花</span>
             <span> SUMMER FLOWERS</span>
           </a>
-          <a href="">
+          <a href="./customization.html">
             <span>双层定制</span>
             <span> CUSTOMIZED PRO </span>
           </a>
@@ -83,7 +83,7 @@
           </div>
           <!-- 地址 -->
           <div class="header_position">
-            <img src="./images/beijng.png" alt="" />
+            <img src="./images/beijng.png" alt="" class="oImg" />
             <span>北京市</span>
             <img src="./images/pull-down.png" alt="" />
             <!-- 隐藏的地址 -->
@@ -128,7 +128,7 @@
           </div>
           <!-- 购物车 -->
           <div class="header-controller-cart">
-            <a href="">
+            <a href="./cart.html">
               <div class="header-controller-cart-icon">
                 <img src="./images/cart-icon.png" alt="" />
                 <div></div>
@@ -143,17 +143,7 @@
     </div>
     <!-- 引入jquery -->
     <script src="./lib/jquery/jquery-3.4.1.min.js"></script>
-    <script>
-      // 点击header_position-area-list里面的地址上面的地址会改成这个地址图片也会改动
-      $(".header_position-area-list li a").on("click", function () {
-        // 改变文本
-        $(".header_position span").html($(this).text());
-        // 获取点击图片的路径
-        let ImgSrc = $(this).children("img").attr("src");
-        // 改变图片路径
-        $(".header_position img:first-child").attr("src", ImgSrc);
-      });
-    </script>
+
     <!-- 商品 -->
     <!-- 显示出来的广告 -->
     <div class="pr">
@@ -263,40 +253,6 @@
         </a>
       </div>
     </div>
-    <!-- 轮播图js -->
-    <script>
-      let num = 0;
-      $(".right-go").click(function () {
-        num++;
-        if (num > 2) {
-          num = 0;
-        }
-        $(".zoom-wrapper-top ul").animate({
-          left: -95 * num,
-        });
-      });
-      $(".left-go").click(function () {
-        num--;
-        if (num < 0) {
-          num = 2;
-        }
-        $(".zoom-wrapper-top ul").animate({
-          left: -95 * num,
-        });
-      });
-      let timer = setInterval(function () {
-        $(".right-go").click();
-      }, 3000);
-      $(".top-pro-swiper").mousemove(function () {
-        clearInterval(timer);
-      });
-      $(".top-pro-swiper").mouseout(function () {
-        clearInterval(timer);
-        timer = setInterval(function () {
-          $(".right-go").click();
-        }, 3000);
-      });
-    </script>
 
     <!-- 放大镜插件 -->
     <script src="./lib/jquery.exzoom.js"></script>
@@ -412,49 +368,7 @@
         </a>
       </div>
     </div>
-    <script>
-      $(".zoom-wrappers").css("display", "none");
-      $(".pr2").click(function () {
-        $(".zoom-wrappers").slideToggle(1000);
-      });
 
-      $("#twos li").click(function () {
-        $(".sizes").prop("value", $(this).text());
-        // console.log($(this).text());
-      });
-    </script>
-    <!-- 轮播图 -->
-    <script>
-      let nun = 0;
-      // clearInterval(timer);
-      $(".right-go02").click(function () {
-        nun++;
-        if (nun > 2) {
-          nun = 0;
-        }
-        $(".zoom-wrapper-tops ul").animate({
-          left: -95 * nun,
-        });
-      });
-      $(".left-go02").click(function () {
-        nun--;
-        if (nun < 0) {
-          nun = 2;
-        }
-        $(".zoom-wrapper-tops ul").animate({
-          left: -95 * nun,
-        });
-      });
-      $(".top-pro-swipers").mousemove(function () {
-        clearInterval(timer);
-      });
-      $(".top-pro-swipers").mouseout(function () {
-        clearInterval(timer);
-        timer = setInterval(function () {
-          $(".right-go02").click();
-        }, 3000);
-      });
-    </script>
     <!-- 主厨推荐 -->
     <div class="main-pic">
       <h2 class="main-title">主厨推荐</h2>
@@ -544,23 +458,7 @@
       <img src="./images/kf.png" alt="" />
     </a>
   </body>
-  <script>
-    // 点击开始购物关闭地址选择
-    $(".begin").click(function () {
-      $(".bj").hide();
-    });
-    // 点击加入购物车改变购物车商品数累
 
-    $(".join-cart").click(function () {
-      let a = $(this)
-        .parent(".buy-btn")
-        .prevAll(".cake-num")
-        .children("input")
-        .val();
-
-      $(".header-controller-cart-text span b").html(
-        Number(a) + Number($(".header-controller-cart-text span b").html())
-      );
-    });
-  </script>
+  <script src="./lib/jquery/jquery-3.4.1.min.js"></script>
+  <script src="./js/index.js"></script>
 </html>

@@ -24,7 +24,7 @@
             <span>首页</span>
             <span class="active"> HOME </span>
           </a>
-          <a href="">
+          <a href="./all.html">
             <span>所有商品</span>
             <span> PRODUCTS </span>
           </a>
@@ -32,11 +32,11 @@
             <span>下午茶点</span>
             <span> TEA TIME</span>
           </a>
-          <a href="">
+          <a href="./gallerytwo.htm">
             <span>生如夏花</span>
             <span> SUMMER FLOWERS</span>
           </a>
-          <a href="">
+          <a href="./customization.html">
             <span>双层定制</span>
             <span> CUSTOMIZED PRO </span>
           </a>
@@ -61,7 +61,7 @@
           </div>
           <!-- 地址 -->
           <div class="header_position">
-            <img src="./images/beijng.png" alt="" />
+            <img src="./images/beijng.png" alt="" class="oImg" />
             <span>北京市</span>
             <img src="./images/pull-down.png" alt="" />
             <!-- 隐藏的地址 -->
@@ -106,7 +106,7 @@
           </div>
           <!-- 购物车 -->
           <div class="header-controller-cart">
-            <a href="">
+            <a href="./cart.html">
               <div class="header-controller-cart-icon">
                 <img src="./images/cart-icon.png" alt="" />
                 <div></div>
@@ -121,17 +121,6 @@
     </div>
     <!-- 引入jquery -->
     <script src="./lib/jquery/jquery-3.4.1.min.js"></script>
-    <script>
-      // 点击header_position-area-list里面的地址上面的地址会改成这个地址图片也会改动
-      $(".header_position-area-list li a").on("click", function () {
-        // 改变文本
-        $(".header_position span").html($(this).text());
-        // 获取点击图片的路径
-        let ImgSrc = $(this).children("img").attr("src");
-        // 改变图片路径
-        $(".header_position img:first-child").attr("src", ImgSrc);
-      });
-    </script>
 
     <!-- 隐藏的商品 -->
     <div class="zoom-wrapper clearfix">
@@ -418,30 +407,7 @@
     </a>
     <!-- 放大镜插件 -->
     <script src="./lib/jquery.exzoom.js"></script>
-    <script>
-      $("#exzoom").exzoom(
-        (defaults = {
-          navWidth: 76, //列表每个宽度,该版本中请把宽高填写成一样
-          navHeight: 76, //列表每个高度,该版本中请把宽高填写成一样
-          autoPlay: false, //是否自动播放
-          navBorder: 0, //列表边框，没有边框填写0，边框在css中修改
-        })
-      );
-    </script>
 
-    <!-- 商品详情js -->
-    <!-- 点击标题，下面的内容就换成相关内容 -->
-
-    <script>
-      $(".idea-title li").click(function () {
-        let $index = $(this).index();
-        $(this).children(".title-item-text").addClass("wei");
-        $(this).children(".title-item-en").show();
-        $(this).siblings().children(".title-item-en").hide();
-        $(this).siblings().children(".title-item-text").removeClass("wei");
-        $(".idea-content li").eq($index).siblings("li").hide();
-        $(".idea-content li").eq($index).show();
-      });
-    </script>
+    <script src="./js/product.js"></script>
   </body>
 </html>

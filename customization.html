@@ -6,9 +6,9 @@
     <title>BON CAKE官网-高颜值的甜</title>
     <link rel="shortcut icon" href="./images/logol.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./lib/normalize.css" />
-    <!-- 活动验证css -->
-    <link rel="stylesheet" href="./css/dragverify.css" />
-    <link rel="stylesheet" href="./css/register.css" />
+    <!-- 轮播图 -->
+    <link rel="stylesheet" href="./lib/slideshow/picture-carousel.min.css" />
+    <link rel="stylesheet" href="./css/customization.css" />
   </head>
   <body>
     <!-- 顶部导航栏 -->
@@ -24,7 +24,7 @@
             <span>首页</span>
             <span> HOME </span>
           </a>
-          <a href="">
+          <a href="./all.html">
             <span>所有商品</span>
             <span> PRODUCTS </span>
           </a>
@@ -32,13 +32,13 @@
             <span>下午茶点</span>
             <span> TEA TIME</span>
           </a>
-          <a href="">
+          <a href="./gallerytwo.htm">
             <span>生如夏花</span>
             <span> SUMMER FLOWERS</span>
           </a>
           <a href="./customization.html">
             <span>双层定制</span>
-            <span> CUSTOMIZED PRO </span>
+            <span class="active"> CUSTOMIZED PRO </span>
           </a>
         </nav>
         <!-- 顶部竖线 -->
@@ -47,7 +47,7 @@
         <div class="header-controller">
           <!-- 登录 -->
           <div class="header-controller-login">
-            <a href="">
+            <a href="./register.html">
               <img src="./images/login-icon.png" alt="" />
               <span> 登录</span>
             </a>
@@ -120,72 +120,151 @@
       </header>
     </div>
 
-    <!-- 登录 -->
-    <div class="register">
-      <img src="./images/register-text.png" alt="" />
-      <p>高／颜／值／的／甜</p>
-      <div class="square-bg"></div>
-      <div class="yellow-bg">
-        <div class="register-form">
-          <form action="">
-            <div class="register-tab">
-              <span class="name">账号密码登录</span>
-              <span> | </span>
-              <span class="password">手机验证码登录</span>
-            </div>
-            <div class="one">
-              <input
-                type="text"
-                name="name"
-                placeholder="用户名/邮箱地址/手机号"
-                class="register-name"
-              />
-              <input
-                type="password"
-                name="password"
-                placeholder="请输入您的密码"
-                class="register-password"
-              />
-            </div>
-
-            <div class="two">
-              <input type="text" placeholder="请输入您的手机号" class="phone" />
-              <!-- 滑动验证 -->
-              <div id="dragverify"></div>
-              <div class="register-code">
-                <input type="text" placeholder="请输入短信验证码" />
-
-                <a href="javascript:;">
-                  <span class="btn">获取验证码</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="login-btn">登录</div>
-          </form>
-          <div class="modal-footer clearfix">
-            <div class="pwd-opt">
-              <input type="checkbox" />
-              <span>记住密码</span>
-            </div>
-            <div class="forget-pwd">
-              <a href="javascript:;">忘记密码</a>
-              <a href="javascript:;">去注册</a>
-            </div>
-            <div class="cut-line">
-              <img src="./images/line-pic.png" alt="" />
-              <b>快捷登录</b>
-              <img src="./images/line-pic.png" alt="" />
-            </div>
-            <a
-              href="https://open.weixin.qq.com/connect/qrconnect?appid=wx80f5e33b92119a53&response_type=code&scope=snsapi_login&redirect_uri=https%3A%2F%2Fwww.boncake.com.cn%2Findex.php%2Fopenapi%2Ftrustlogin_api%2Fparse%2Ftrustlogin_plugin_weixin%2Fcallback%2F&state=5f6e8853fa57eab15b1405d3e913dca1"
-              class="wx-chat"
-            >
-              <img src="./images/wx-chat.png" alt="" />
-            </a>
-          </div>
+    <!-- 广告 -->
+    <div class="page-wrapper clearfix one">
+      <a href="javascript:;">
+        <img src="./images/customization01.jpg" alt="" />
+      </a>
+      <div class="summer-desc">
+        <div class="summer-more">
+          <h2>双层定制</h2>
+          <p>CUSTOMIZED PRO</p>
+          <a href="javascript:;" class="btn">更多</a>
+          <img src="./images/more-down.png" alt="" />
         </div>
       </div>
+      <div class="activity">
+        <h2>注册官网｜账户即享100元礼包</h2>
+        <p>储值最高可送￥1248</p>
+        <p>2019.02.01-2019.03.01</p>
+        <p>点击 <a href="javascript:;">了解详情</a></p>
+      </div>
+    </div>
+
+    <!-- 广告 -->
+    <div class="page-wrapper burst clearfix">
+      <a href="javascript:;">
+        <img src="./images/customization02.jpg" alt="" />
+      </a>
+    </div>
+
+    <!-- 产品 -->
+    <div class="product">
+      <ul class="clearfix">
+        <li>
+          <a href="./product.html" class="pro-img-box">
+            <img src="./images/customization03.jpg" alt="" />
+          </a>
+          <div class="pro-media-desc">
+            <div class="pro-en-name">
+              Corolla of The Goddess
+            </div>
+            <div class="pro-zh-name">
+              女神的花冠双层定制
+            </div>
+            <div class="pro-price">
+              ￥928
+            </div>
+            <button class="pro-buy">
+              <img src="./images/btn-cart-icon.png" alt="" />
+              <span>购买</span>
+            </button>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:;" class="pro-img-box">
+            <img src="./images/customization04.jpg" alt="" />
+          </a>
+          <div class="pro-media-desc">
+            <div class="pro-en-name">
+              Cherish
+            </div>
+            <div class="pro-zh-name">
+              珍爱双层定制
+            </div>
+            <div class="pro-price">
+              ￥898
+            </div>
+            <button class="pro-buy">
+              <img src="./images/btn-cart-icon.png" alt="" />
+              <span>购买</span>
+            </button>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:;" class="pro-img-box">
+            <img src="./images/customization05.jpg" alt="" />
+          </a>
+          <div class="pro-media-desc">
+            <div class="pro-en-name">
+              Peach blossom
+            </div>
+            <div class="pro-zh-name">
+              小桃红双层定制
+            </div>
+            <div class="pro-price">
+              ￥868
+            </div>
+            <button class="pro-buy">
+              <img src="./images/customization06.jpg" alt="" />
+              <span>购买</span>
+            </button>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:;" class="pro-img-box">
+            <img src="./images/product01.jpg" alt="" />
+          </a>
+          <div class="pro-media-desc">
+            <div class="pro-en-name">
+              Bouquet of joy
+            </div>
+            <div class="pro-zh-name">
+              喜上玫梢双层定制
+            </div>
+            <div class="pro-price">
+              ￥998
+            </div>
+            <button class="pro-buy">
+              <img src="./images/btn-cart-icon.png" alt="" />
+              <span>购买</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- 广告 -->
+    <div class="page-wrapper burst clearfix">
+      <a href="javascript:;">
+        <img src="./images/customization07.jpg" alt="" />
+      </a>
+    </div>
+
+    <!-- 产品 -->
+
+    <div class="product">
+      <ul class="clearfix">
+        <li>
+          <a href="javascript:;" class="pro-img-box">
+            <img src="./images/customization08.jpg" alt="" />
+          </a>
+          <div class="pro-media-desc">
+            <div class="pro-en-name">
+              Le mome
+            </div>
+            <div class="pro-zh-name">
+              玫瑰人生双层定制
+            </div>
+            <div class="pro-price">
+              ￥958
+            </div>
+            <button class="pro-buy">
+              <img src="./images/btn-cart-icon.png" alt="" />
+              <span>购买</span>
+            </button>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <!-- 底部 -->
@@ -266,12 +345,11 @@
     <a href="javascript:;" class="service">
       <img src="./images/kf.png" alt="" />
     </a>
+
     <!-- 引入jquery -->
     <script src="./lib/jquery/jquery-3.4.1.min.js"></script>
-    <!-- 表单验证插件 -->
-    <script src="./lib/jquery.min.js"></script>
-    <script src="./lib/dragverify.js"></script>
-    <!-- js代码 -->
-    <script src="./js/register.js"></script>
+    <!-- 轮播图插件 -->
+    <script src="./lib/slideshow/picture-carousel.min.js"></script>
+    <script src="./js/galleryone.js"></script>
   </body>
 </html>
