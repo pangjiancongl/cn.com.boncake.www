@@ -1123,7 +1123,7 @@
             </a>
             <div class="hover-box">
               <a href="javascript:;">企业福利</a> <br />
-              <a href="javascript:;">明星试吃员</a>
+              <a href="./activity.html">明星试吃员</a>
             </div>
           </li>
         </ul>
@@ -1169,38 +1169,5 @@
     <script src="./lib/jquery/jquery-3.4.1.min.js"></script>
 
     <script src="./js/all.js"></script>
-    <script>
-      $(".all-pro").click(function () {
-        $(".product li").show();
-        $(".product li").css("margin-right", 31);
-        for (let i = 0; i < 60; i++) {
-          i = i + 3;
-          $(`.product li`).eq(i).css("margin-right", 0);
-        }
-
-        $(".all-pro").css("background-color", "#333333");
-        $(".all-pro").css("color", "#fff");
-        // $(".product ul").addClass("no");
-        $(".all-series span").text("所有系列");
-      });
-      $(".theme-series li").click(function () {
-        name = $(this).attr("class");
-        $(`.${name}s`).siblings("li").hide();
-        $(`.${name}s`).show();
-        $(`.${name}s`).css("margin-right", 31);
-        $(`.${name}s`).eq(3).css("margin-right", 0);
-        $(`.${name}s`).eq(7).css("margin-right", 0);
-        $(".bj").hide();
-        $(".all-pro").css("background-color", "#f3f2f1");
-        $(".all-pro").css("color", "#000");
-
-        let a = $(this)
-          .children(".series-desc")
-          .children("div:first-child")
-          .text();
-
-        $(".all-series span").text(a);
-      });
-    </script>
   </body>
 </html>

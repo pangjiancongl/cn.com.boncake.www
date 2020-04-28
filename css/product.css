@@ -33,9 +33,9 @@ header {
 .nav-menu a span:first-child {
   color: #333;
 }
-.nav-menu a:first-child span {
+/* .nav-menu a:first-child span {
   color: #d3b145;
-}
+} */
 .nav-menu span:first-child {
   font-size: 15px;
   display: block;

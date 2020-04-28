@@ -1,0 +1,360 @@
+/* 顶部导航 */
+.top {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 1px 12px 0px rgba(128, 113, 113, 0.3);
+}
+header {
+  width: 1260px;
+  height: 92px;
+  margin: 0 auto;
+}
+.nav-logo {
+  float: left;
+}
+.nav-logo img {
+  margin: 20px 0 0 30px;
+}
+.nav-menu {
+  float: left;
+  width: 586px;
+  text-align: center;
+  margin-top: 6px;
+}
+.nav-menu a {
+  display: inline-block;
+  margin: 20px 30px 0 5px;
+}
+.nav-menu a span {
+  color: #999;
+}
+.nav-menu a span:first-child {
+  color: #333;
+}
+.nav-menu a:nth-child(3) span {
+  color: #d3b145;
+}
+.nav-menu span:first-child {
+  font-size: 15px;
+  display: block;
+}
+.nav-menu span:nth-child(2) {
+  display: block;
+  margin-top: 6px;
+  font-size: 8px;
+  line-height: 1.6;
+  position: relative;
+}
+.active::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 2px;
+  background-color: #d3b145;
+}
+.header-cut-line {
+  float: left;
+  margin-top: 24px;
+  margin-right: 10px;
+}
+.header-controller {
+  float: right;
+  width: 405px;
+  height: 66px;
+  text-align: center;
+  margin-top: 6px;
+}
+.header-controller > div {
+  display: inline-block;
+  height: 100%;
+  margin-right: 25px;
+  line-height: 66px;
+  font-size: 15px;
+}
+.header-controller-cart-icon {
+  display: inline-block;
+  position: relative;
+}
+.header-controller-cart-text span {
+  color: #e60012;
+  font-size: 12px;
+}
+.header-controller-cart-icon div {
+  position: absolute;
+  border: 5px solid transparent;
+  border-bottom-color: #e60012;
+  top: 16px;
+  left: 10px;
+}
+.header_position {
+  position: relative;
+}
+.header_position > img:first-child {
+  width: 19px;
+}
+.header_position-area-list {
+  position: absolute;
+  top: 50px;
+  left: -16px;
+  font-size: 15px;
+
+  width: 100px;
+  line-height: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: left;
+  display: none;
+  padding: 2px;
+  box-shadow: 0px 1px 12px 0px rgba(128, 113, 113, 0.3);
+}
+.header_position-area-list a {
+  color: #333333;
+}
+.header_position-area-list li {
+  display: inline-block;
+}
+.header_position-area-list img {
+  vertical-align: middle;
+  width: 19px;
+}
+.header_position-area-list li a:hover {
+  color: #d3b145;
+}
+/* 鼠标经过北京让隐藏的div显示,离开隐藏 */
+.header_position:hover > .header_position-area-list {
+  display: block;
+}
+
+.page-wrapper {
+  padding-top: 172px;
+  width: 1173px;
+  margin: auto;
+}
+.page-title {
+  width: 100%;
+  height: 26px;
+  line-height: 26px;
+  vertical-align: top;
+  border-bottom: 1px solid #999999;
+  font-size: 16px;
+  color: #333;
+}
+.page-title span {
+  display: inline-block;
+  position: relative;
+  padding: 0 10px;
+}
+.page-title span::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  font-size: 16px;
+  background-color: #333333;
+}
+.level-list {
+  padding-bottom: 16px;
+  display: inline-block;
+  padding-top: 34px;
+}
+.section-desc {
+  height: 32px;
+}
+.dot {
+  background-color: #d3b145;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.section-text {
+  vertical-align: middle;
+  font-size: 16px;
+  color: #333333;
+}
+.wbj {
+  margin-top: 60px;
+}
+.taster-info-group {
+  position: relative;
+  margin-top: 55px;
+}
+.taster-info-group input {
+  display: block;
+  width: 531px;
+  height: 57px;
+  line-height: 55px;
+  padding: 0 16px;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  border: solid 1px #d9d9d9;
+  font-size: 16px;
+}
+.btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 116px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #333333;
+  cursor: pointer;
+  outline: none;
+}
+.ts {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px 50px;
+  border: 1px solid #a3afb9;
+  box-shadow: 2px 2px 1px rgba(150, 150, 150, 0.5);
+  color: #333333;
+  font-size: 16px;
+}
+/* 底部 */
+footer {
+  /* margin-top: 100px; */
+  /* width: 100%; */
+  padding: 26px 75px 15px 52px;
+  border-top: 1px solid #c9c9c9;
+  height: 200px;
+}
+footer .business img {
+  margin-bottom: 40px;
+}
+footer .business p {
+  color: #333;
+  font-size: 13px;
+  line-height: 2;
+}
+.business {
+  float: left;
+}
+.contact {
+  float: left;
+}
+.contact ul {
+  margin-top: 44px;
+}
+.contact li {
+  float: left;
+  width: 180px;
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
+}
+.contact a {
+  color: #333;
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: center;
+}
+.contact div {
+  font-size: 8px;
+  /* text-align: center; */
+}
+.contact li::after {
+  content: "";
+  width: 0px;
+  height: 16px;
+  border-left: 1px solid #000;
+  position: absolute;
+  top: 6px;
+  right: 0;
+}
+.contact li:last-child::after {
+  border: none;
+}
+.contact ul {
+  width: 818px;
+  margin-left: 40px;
+}
+.hover-box {
+  padding: 12px;
+  position: relative;
+  top: 10px;
+  background-color: #fff;
+  box-shadow: 0px 1px 12px 0px rgba(128, 113, 113, 0.3);
+  border-radius: 10px;
+  display: none;
+}
+.hover-box::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  /* border: 10px solid #ccc; */
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  width: 0;
+  height: 0;
+}
+.hover-box a {
+  font-size: 15px;
+  line-height: 2;
+}
+.hover-box a:hover {
+  color: #d3b145;
+}
+.contact li:last-child:hover > .hover-box {
+  display: block;
+}
+.address {
+  float: left;
+}
+.logo-company {
+  margin-bottom: 22px;
+}
+.logo-company a {
+  margin-right: 40px;
+  position: relative;
+}
+.logo-company a > img {
+  width: 40px;
+  height: 40px;
+}
+.weibo {
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 10px solid #e0e0e0;
+  border-radius: 10px;
+  display: none;
+}
+.logo-company a:hover > .weibo {
+  display: block;
+}
+.weibo img {
+  width: 90px;
+  height: 90px;
+}
+.book-footer {
+  line-height: 2;
+  font-size: 13px;
+  color: #333;
+}
+.service {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
